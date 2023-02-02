@@ -71,7 +71,7 @@ function Herobanner() {
               <Grid item xs={12} xl={6} sm={12}>
                 <div className='wrapper'>
                   <img className="wave" alt="wave" src={wave}/>
-                  <img className='center-img relative' alt='pc' src={image} />
+                  <img className='center-img relative animate__animated animate__bounceInDown animate__slow' alt='pc' src={image} />
                 </div>
               </Grid>
           </Grid>

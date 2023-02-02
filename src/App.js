@@ -1,4 +1,5 @@
 import "./Assets/Style/style.css"
+import 'animate.css';
 import Navbar from './Components/Navbar'
 import Herobanner from "./Components/Herobanner";
 import Projects from "./Components/Projects";
