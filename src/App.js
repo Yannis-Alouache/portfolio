@@ -4,12 +4,14 @@ import Herobanner from "./Components/Herobanner";
 import Projects from "./Components/Projects";
 import About from "./Components/About";
 import ContactMe from "./Components/ContactMe"
+import Skills from "./Components/Skills";
 
 function App() {
   return (
     <>
       <Navbar />
       <Herobanner />
+      <Skills />
       <Projects />
       <About />
       <ContactMe />
