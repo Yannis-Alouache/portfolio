@@ -24,14 +24,14 @@ function Herobanner() {
       if (forwards) {
         if (offset >= words[i].length) {
           ++skip_count;
-          if (skip_count == skip_delay) {
+          if (skip_count === skip_delay) {
             forwards = false;
             skip_count = 0;
           }
         }
       }
       else {
-        if (offset == 0) {
+        if (offset === 0) {
           forwards = true;
           i++;
           offset = 0;
@@ -41,7 +41,7 @@ function Herobanner() {
         }
       }
       part = words[i].substr(0, offset);
-      if (skip_count == 0) {
+      if (skip_count === 0) {
         if (forwards) {
           offset++;
         }
@@ -70,8 +70,8 @@ function Herobanner() {
               </Grid>
               <Grid item xs={12} xl={6} sm={12}>
                 <div className='wrapper'>
-                  <img className="wave" src={wave}/>
-                  <img className='center-img relative' src={image} />
+                  <img className="wave" alt="wave" src={wave}/>
+                  <img className='center-img relative' alt='pc' src={image} />
                 </div>
               </Grid>
           </Grid>
