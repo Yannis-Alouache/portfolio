@@ -1,0 +1,25 @@
+[
+    {
+        "name": "AngryLLama",
+        "description": "AngryLLama est un site web présentant une collection nft crée par moi-même.",
+        "link": null,
+        "technologies": [
+            {"name": "Javascript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"},
+            {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png" },
+            {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" },
+            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" }
+        ],
+        "gallery": [
+            {"image": "https://user-images.githubusercontent.com/57330326/167225010-ef44d018-972e-4941-982d-dbd2d5dafa7c.png"},
+            {"image": "https://user-images.githubusercontent.com/57330326/167224985-d61f2477-de2a-43df-8fcf-4b10d7d05da1.png"},
+            {"image": "https://user-images.githubusercontent.com/57330326/167225059-bfca5bde-321c-4151-b107-aa5a3e2077d8.png"},
+            {"image": "https://user-images.githubusercontent.com/57330326/167225032-b3ddafc9-3efb-4417-b5f1-af834eac1bbf.png"}
+        ],
+        "infomations": [
+            {"name": "Javascript", "description": "Javascript est le language de progammation sur lequel repose le projet"},
+            {"name": "NPM", "description": "NPM est le node package manager utiliser pour l'installation de dépendences du projet"},
+            {"name": "React", "description": "React est le framework javascript frontend utiliser"},
+            {"name": "Bootstrap", "description": "Bootstrap est le framework CSS utiliser pour le projet"}
+        ]
+    }
+]
