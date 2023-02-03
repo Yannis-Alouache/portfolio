@@ -61,7 +61,12 @@ function Skills() {
                     <Grid md={6}>
                         <Skill name="Django" image="https://www.kojac.nl/tailwind/images/Frontend/django.png"/>
                     </Grid>
-
+                    <Grid md={6}>
+                        <Skill name="MySQL" image="https://pngimg.com/uploads/mysql/mysql_PNG11.png"/>
+                    </Grid>
+                    <Grid md={6}>
+                        <Skill name="NPM" image="https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png"/>
+                    </Grid>
                 </Grid>
             </Container>
         </section>
