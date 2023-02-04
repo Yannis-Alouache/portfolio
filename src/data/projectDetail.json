@@ -3,7 +3,10 @@
         "name": "AngryLLama",
         "description": "AngryLLama est un site web présentant une collection nft crée par moi-même.",
         "link": null,
+        "github": "https://github.com/Yannis-Alouache/AngryLlama",
         "technologies": [
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png"},
             {"name": "Javascript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"},
             {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png" },
             {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" },
