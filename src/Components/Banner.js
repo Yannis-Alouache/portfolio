@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container } from '@mui/system'
-import { Grid, Typography } from '@mui/material'
+import { Alert, Box, Grid, Typography } from '@mui/material'
+import { Link } from '@mui/material'
 
 function Banner(props) {
-    let {name, description} = props
+    let {name, description, link} = props
     return (
-        <Container sx={{marginBottom: "7em", paddingTop: "7em"}} className="self-center" maxWidth='lg'>
+        <Box className="self-center bannerWrapper" maxWidth='lg'>
             <Grid container>
                 <Grid item className='text-centerv' md={12}>
                     <Typography variant='h3'>
@@ -15,8 +15,17 @@ function Banner(props) {
                 <Grid item className='text-centerv' md={12}>
                     <p>{description}</p>
                 </Grid>
+                <Grid item px={{paddingTop: "20px"}} className='text-centerv' md={12}>
+                    {link 
+                        ? <Link className='linkToProject' href={link}>{link}</Link>
+                    
+                        : <Alert px={{paddingRight: "20px"}} severity="error">
+                            Ce projet n'étant pas encore hébergé, il ne possède pas de lien
+                          </Alert>
+                    }
+                </Grid>
             </Grid>
-        </Container>
+        </Box>
     )
 }
 
