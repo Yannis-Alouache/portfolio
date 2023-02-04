@@ -15,6 +15,7 @@ import projects from "./data/projectDetail.json"
 function App() {
 
   let projectDetailAngryLlama = projects[0]
+  let projectMyCastleVania = projects[1]
 
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/angry-llama" element={<ProjectDetail {...projectDetailAngryLlama} />} />
+          <Route path="/project/my-castlevania" element={<ProjectDetail {...projectMyCastleVania} />} />
         </Routes>
       </Router>
     </>
