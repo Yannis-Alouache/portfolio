@@ -13,7 +13,8 @@ function ProjectDetail(props) {
     link,
     technologies,
     gallery,
-    informations
+    informations,
+    github
   } = props
 
   return (
@@ -23,9 +24,9 @@ function ProjectDetail(props) {
         <Banner name={name} description={description} link={link}/>
         <Technologies technologies={technologies} />
         <Gallery gallery={gallery} />
-        <Container  maxWidth="lg">
+        <Container maxWidth="lg">
           <Typography variant='h4'>Github</Typography>
-          <Link href='https://github.com/Yannis-Alouache/portfolio'>https://github.com/Yannis-Alouache/portfolio</Link>
+          <Link href={github}>{github}</Link>
         </Container>
       </section>
     </>
