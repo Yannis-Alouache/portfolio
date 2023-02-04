@@ -204,7 +204,7 @@ section {
     margin-bottom: 7em;
 }
 
-.skills h3, .projectDetail h3 {
+.skills h3, .projectDetail h3, .projectDetail h4{
     font-family: 'Maven Pro', sans-serif;
     margin-bottom: 20px;
 }
@@ -224,4 +224,26 @@ section {
     max-height: 24px;
     width: auto;
     height: auto;
+}
+
+.projectDetail {
+    padding-bottom: 7em;
+}
+
+.projectDetail .linkToProject {
+    color: white;
+    padding: 10px 30px;
+    border: #ffb8fe 2px solid;
+    border-radius: 10px;
+    background: #b80de32e;
+}
+
+.projectDetail .bannerWrapper {
+    margin-bottom: 7em;
+    padding-top: 7em;
+    background: url("https://i.ibb.co/7rQ0FB5/wave-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    max-width: 100%;
 }
