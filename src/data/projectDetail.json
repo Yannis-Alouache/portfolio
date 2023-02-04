@@ -24,5 +24,21 @@
             {"name": "React", "description": "React est le framework javascript frontend utiliser"},
             {"name": "Bootstrap", "description": "Bootstrap est le framework CSS utiliser pour le projet"}
         ]
+    },
+    {
+        "name": "myCastleVania",
+        "description": "MyCastleVania est un jeu vidéo de type runner inpsiré de l'univers de CastleVania",
+        "link": null,
+        "github": "https://github.com/Yannis-Alouache/My_runner",
+        "technologies": [
+            {"name": "C Programming Language", "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"},
+            {"name": "SFML", "image": "https://www.sfml-dev.org/download/goodies/sfml-icon-big.png"},
+            {"name": "MakeFile", "image": "https://maex.me/img/gnu.png"}
+        ],
+        "gallery": [
+            {"image": null},
+            {"image": null},
+            {"image": null}
+        ]
     }
 ]
