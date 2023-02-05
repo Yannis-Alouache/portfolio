@@ -145,7 +145,7 @@ section {
     border-radius: 20px;
     position: relative;
     padding: 1.7em 1.7em;
-
+    cursor: pointer;
     transition-duration: 400ms;
 }
 
@@ -166,6 +166,11 @@ section {
 
 .project h1 {
     margin-top: 10px;
+    color: white;
+}
+
+.project p {
+    color: white;
 }
 
 .about .wrapper {
