@@ -144,7 +144,7 @@ section {
     background: #191919;
     border-radius: 20px;
     position: relative;
-    padding: 1.7em 0;
+    padding: 1.7em 1.7em;
 
     transition-duration: 400ms;
 }
@@ -156,20 +156,16 @@ section {
 
 .project .image {
     border-radius: 20px;
-    width: 90%;
+    width: 100%;
     display: block;
-    height: 515px;
+    height: 280px;
     margin: auto;
     object-fit: cover;
-}
-
-.project p {
-    margin-left: 27px;
+    object-position: top;
 }
 
 .project h1 {
     margin-top: 10px;
-    margin-left: 27px;
 }
 
 .about .wrapper {
@@ -241,7 +237,7 @@ section {
 .projectDetail .bannerWrapper {
     margin-bottom: 7em;
     padding-top: 7em;
-    background: url("https://i.ibb.co/7rQ0FB5/wave-1.png");
+    background: url("../Images/projectDetailWave.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 40vh;
