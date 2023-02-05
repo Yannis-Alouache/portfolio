@@ -2,21 +2,25 @@
     {
         "name": "AngryLLama - nft website",
         "tag": "non profit / nft / fun project",
-        "image": "angryllama.png"
+        "image": "angryllama.png",
+        "link": "/project/angry-llama"
     },
     {
         "name": "Obarbeuc - restaurant website",
         "tag": "non profit / food",
-        "image": "obarbeuc.png"  
+        "image": "obarbeuc.png",
+        "link": "/project/obarbeuc"
     },
     {
         "name": "E-Taxi - Taxi website",
         "tag": "non profit / Transport",
-        "image": "etaxi.png"  
+        "image": "etaxi.png",
+        "link": "/project/angry-llama"
     },
     {
         "name": "GothicVania - Video Game",
         "tag": "non profit / Game",
-        "image": "gothic-vania-1.png"  
+        "image": "gothic-vania-1.png",
+        "link": "/project/my-castlevania" 
     }
 ]
