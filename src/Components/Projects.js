@@ -11,7 +11,7 @@ function Projects() {
       <Container className="self-center" maxWidth='lg'>
           <Grid container spacing={10}>
             {projects.map(project => (
-              <Grid item xs={12} xl={6} sm={6}>
+              <Grid item xs={12} xl={6} sm={6} key={project.name}>
                 <Project name={project.name} tag={project.tag} image={project.image} />
               </Grid>
             ))}
