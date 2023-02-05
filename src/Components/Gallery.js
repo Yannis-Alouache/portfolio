@@ -16,8 +16,8 @@ function Gallery(props) {
             {gallery.map((item) => (
                 <ImageListItem key={item.image}>
                 <img
-                    src={`${item.image}?w=164&h=164&fit=crop&auto=format`}
-                    srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={require("../Assets/Images/" + item.image) + "?w=164&h=164&fit=crop&auto=format"}
+                    srcSet={require("../Assets/Images/" + item.image) + "?w=164&h=164&fit=crop&auto=format&dpr=2 2x"}
                     alt=""
                     loading="lazy"
                 />
