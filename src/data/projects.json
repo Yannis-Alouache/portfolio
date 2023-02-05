@@ -13,5 +13,10 @@
         "name": "E-Taxi - Taxi website",
         "tag": "non profit / Transport",
         "image": "etaxi.png"  
+    },
+    {
+        "name": "GothicVania - Video Game",
+        "tag": "non profit / Game",
+        "image": "castle-vania-1.png"  
     }
 ]
