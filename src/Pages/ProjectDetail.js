@@ -13,7 +13,6 @@ function ProjectDetail(props) {
     link,
     technologies,
     gallery,
-    informations,
     github
   } = props
 
