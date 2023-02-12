@@ -6,56 +6,58 @@ import image from "../Assets/Images/macbook.png"
 import wave from "../Assets/Images/wave.svg"
 
 function Herobanner() {
-  const words = ["Hi. I'm Yannis.", "I turn ideas into real life products."]
-  const title = document.getElementsByClassName("title")
-  const len = words.length;
-  const speed = 75;
-  const skip_delay = 15;
-
-  let skip_count = 0;
-  let forwards = true;
-  let offset = 0;
-  let i = 0;
-  let part;
 
 
-  function animateTitle() {
-    setInterval(function () {
-      if (forwards) {
-        if (offset >= words[i].length) {
-          ++skip_count;
-          if (skip_count === skip_delay) {
-            forwards = false;
-            skip_count = 0;
-          }
-        }
-      }
-      else {
-        if (offset === 0) {
-          forwards = true;
-          i++;
-          offset = 0;
-          if (i >= len) {
-            i = 0;
-          }
-        }
-      }
-      part = words[i].substr(0, offset);
-      if (skip_count === 0) {
-        if (forwards) {
-          offset++;
-        }
-        else {
-          offset--;
-        }
-      }
-      title[0].innerHTML = part
-    }, speed);
-  }
+  
 
   useEffect(() => {
+    const words = ["Hi. I'm Yannis.", "I turn ideas into real life products."]
+    const title = document.getElementsByClassName("title")
+    const len = words.length;
+    const speed = 75;
+    const skip_delay = 15;
+  
+    let skip_count = 0;
+    let forwards = true;
+    let offset = 0;
+    let i = 0;
+    let part;
+    
+    function animateTitle() {
+      setInterval(function () {
+        if (forwards) {
+          if (offset >= words[i].length) {
+            ++skip_count;
+            if (skip_count === skip_delay) {
+              forwards = false;
+              skip_count = 0;
+            }
+          }
+        }
+        else {
+          if (offset === 0) {
+            forwards = true;
+            i++;
+            offset = 0;
+            if (i >= len) {
+              i = 0;
+            }
+          }
+        }
+        part = words[i].substr(0, offset);
+        if (skip_count === 0) {
+          if (forwards) {
+            offset++;
+          }
+          else {
+            offset--;
+          }
+        }
+        title[0].innerHTML = part
+      }, speed);
+    }
     animateTitle()
-  }, [animateTitle])
+  }, [])
 
   return (
     <>
