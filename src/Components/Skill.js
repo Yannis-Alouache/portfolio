@@ -6,7 +6,7 @@ function Skill(props) {
 
     return (
         <Box className='skill'>
-            <img src={image} />
+            <img alt="" src={image} />
             <p>{name}</p>
         </Box>
     )
