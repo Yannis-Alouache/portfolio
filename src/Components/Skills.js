@@ -7,7 +7,7 @@ import Skill from './Skill'
 function Skills() {
   return (
     <>
-        <section className="skills">
+        <section className="skills" id="skills">
             <Container className="self-center" maxWidth='lg'>
                 <Typography variant='h3'>
                     My Skill Set
