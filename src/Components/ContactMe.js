@@ -1,20 +1,61 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { Box, Container } from '@mui/system';
 import { Grid, Link, TextField, Typography, Button } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 
 function ContactMe() {
 
   const form = useRef();
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState("")
+  const [errorField, setErrorField] = useState("")
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true)
+    
+    //eslint-disable-next-line
+    const mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const phoneRegex = /^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/
 
-    emailjs.sendForm('service_e09ayin', 'template_c7iy1ko', form.current, 'BgO3BxW240MnYvru3')
+    if (form.current[0].value === "") {
+      setMessage("Enter a last name")
+      setErrorField("lastName")
+      setIsLoading(false)
+      return
+    }
+    if (form.current[1].value === "") {
+      setMessage("Enter a first name")
+      setErrorField("firstName")
+      setIsLoading(false)
+      return
+    }
+    if (!mailRegex.test(form.current[2].value)) {
+      setMessage("Enter a valid e-mail")
+      setErrorField("mail")
+      setIsLoading(false)
+      return
+    }
+    if (!phoneRegex.test(form.current[3].value)) {
+        setMessage("Enter a valid phone number")
+        setErrorField("phone")
+        setIsLoading(false)
+        return
+    }
+    if (form.current[4].value === "") {
+      setMessage("Enter a message")
+      setErrorField("message")
+      setIsLoading(false)
+      return
+    }
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+          setErrorField("")
+          setMessage("")
+          setIsLoading(false)
+          form.current.reset()
       });
   };
 
@@ -39,15 +80,43 @@ function ContactMe() {
               <Grid item xl={7}>
                 <Box autoComplete="off">
                   <form ref={form}>
-                    <TextField id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="lastName" margin="dense" label="Last Name" variant="standard" />
-                    <TextField id="standard-basic" required className='input' sx={{width: "45%"}} name="firstName" margin="dense" label="First Name" variant="standard" />
-                    <TextField id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="mail" margin="dense" label="E-mail" variant="standard" />
-                    <TextField id="standard-basic" required className='input' sx={{width: "45%"}} name="phone" margin="dense" label="Phone Number" variant="standard" />
-                    <TextField id="standard-basic" required className='input' sx={{width: "100%"}} name='message' margin="dense" label="Message" variant="standard" multiline rows={5} />
-                    <Button className='sendButton' onClick={sendEmail}>Envoyer</Button>
+                    {errorField === "lastName" ? (
+                      <TextField error helperText={message} id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="lastName" margin="dense" label="Last Name" variant="standard" />
+                    ) : (
+                      <TextField id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="lastName" margin="dense" label="Last Name" variant="standard" />
+                    )}
+
+                    {errorField === "firstName" ? (
+                      <TextField error helperText={message} id="standard-basic" required className='input' sx={{width: "45%"}} name="firstName" margin="dense" label="First Name" variant="standard" />
+                    ): (
+                      <TextField id="standard-basic" required className='input' sx={{width: "45%"}} name="firstName" margin="dense" label="First Name" variant="standard" />
+                    )}
+
+                    {errorField === "mail" ? (
+                      <TextField error helperText={message} id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="mail" margin="dense" label="E-mail" variant="standard" />
+                    ): (
+                      <TextField id="standard-basic" required className='input' sx={{width: "45%", marginRight: "10%"}} name="mail" margin="dense" label="E-mail" variant="standard" />
+                    )}
+
+                    {errorField === "phone" ? (
+                      <TextField error helperText={message} id="standard-basic" required className='input' sx={{width: "45%"}} name="phone" margin="dense" label="Phone Number" variant="standard" />
+                    ): (
+                      <TextField id="standard-basic" required className='input' sx={{width: "45%"}} name="phone" margin="dense" label="Phone Number" variant="standard" />
+                    )}
+
+                    {errorField === "message" ? (
+                      <TextField error helperText={message} id="standard-basic" required className='input' sx={{width: "100%"}} name='message' margin="dense" label="Message" variant="standard" multiline rows={5} />
+                    ): (
+                      <TextField id="standard-basic" required className='input' sx={{width: "100%"}} name='message' margin="dense" label="Message" variant="standard" multiline rows={5} />
+                    )}                    
+
+                    {isLoading ? (
+                      <Button className='sendButton' disabled><CircularProgress size={20}/></Button>
+                    ) : (
+                      <Button className='sendButton' onClick={sendEmail}>ENVOYER</Button>
+                    )}
                   </form>
                 </Box>
-                
               </Grid>
             </Grid>
           </Container>
