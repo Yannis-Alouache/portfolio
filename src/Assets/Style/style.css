@@ -250,6 +250,10 @@ section {
     max-width: 100%;
 }
 
+.contact {
+    padding-bottom: 96px;
+}
+
 .contact .sendButton {
     background-color: rgb(2, 153, 2);
     color: white;
@@ -281,6 +285,10 @@ section {
 
 .contact label .Mui-focused {
     color: #5a39ad;
+}
+
+.contact .css-66dh3a-MuiInputBase-input-MuiInput-input {
+    color: white
 }
 
 .contact .mt30 {
