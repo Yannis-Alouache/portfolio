@@ -13,10 +13,6 @@ function Home() {
         <Skills />
         <Projects />
         <ContactMe />
-        <br />
-        <br />
-        <br />
-        <br />
     </>
   )
 }
