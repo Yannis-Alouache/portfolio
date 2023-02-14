@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/system'
 import image from "../Assets/Images/macbook.png"
-import wave from "../Assets/Images/wave.svg"
 
 function Herobanner() {
 
