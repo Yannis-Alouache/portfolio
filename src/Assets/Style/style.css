@@ -109,16 +109,23 @@ section {
     left: 90%;
 }
 
-.landing .wrapper {
-    background: #191919;
-    border-radius: 20px;
-    position: relative
+.navbar .showMobile {
+    display: none;
 }
 
-.landing .wrapper .wave {
-    position: absolute;
-    top: 0;
+.navbar .navIcon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.landing .wrapper {
     border-radius: 20px;
+    position: relative;
+    background: url("../Images/wave.svg"), #191919;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
 }
 
 .landing .title {
@@ -293,3 +300,36 @@ section {
     border-bottom: 2px solid white
 }
 
+.white {
+    color: white;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .navbar .hideMobile {
+        display: none;
+    }
+    .navbar .showMobile {
+        display: block;
+    }
+    .navbar .linkMobile {
+        padding: 20px;
+    }
+    .landing .title {
+        font-size: 2.3em;
+        min-height: 44px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing .wrapper .img {
+        width: 100%;
+    }
+}
