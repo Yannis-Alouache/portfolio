@@ -325,11 +325,23 @@ section {
         font-size: 2.3em;
         min-height: 44px;
     }
+    .navbar .main-logo {
+        margin-top: -6px;
+    }
+    .navbar .github-logo {
+        margin-top: -6px;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
     .landing .wrapper .img {
         width: 100%;
+    }
+    .navbar .main-logo {
+        margin-top: -10px;
+    }
+    .navbar .github-logo {
+        margin-top: -10px;
     }
 }
