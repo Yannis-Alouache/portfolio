@@ -16,7 +16,7 @@ function Technologies(props) {
             <Grid container>
               {technologies.map(function(technologie) {
                 return (
-                  <Grid md={6}>
+                  <Grid item key={technologie.id} md={6}>
                     <Skill name={technologie.name} image={technologie.image}/>
                   </Grid>
                 )

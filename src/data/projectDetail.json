@@ -5,12 +5,12 @@
         "link": null,
         "github": "https://github.com/Yannis-Alouache/AngryLlama",
         "technologies": [
-            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png"},
-            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png"},
-            {"name": "Javascript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"},
-            {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png" },
-            {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" },
-            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" }
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "Javascript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png", "id": "2"},
+            {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png", "id": "3"},
+            {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png", "id": "4"},
+            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "5"}
         ],
         "gallery": [
             {"image": "angry-llama-1.png"},
@@ -31,9 +31,9 @@
         "link": null,
         "github": "https://github.com/Yannis-Alouache/My_runner",
         "technologies": [
-            {"name": "C Programming Language", "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"},
-            {"name": "SFML", "image": "https://www.sfml-dev.org/download/goodies/sfml-icon-big.png"},
-            {"name": "MakeFile", "image": "https://maex.me/img/gnu.png"}
+            {"name": "C Programming Language", "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png", "id": "0"},
+            {"name": "SFML", "image": "https://www.sfml-dev.org/download/goodies/sfml-icon-big.png", "id": "1"},
+            {"name": "MakeFile", "image": "https://maex.me/img/gnu.png", "id": "2"}
         ],
         "gallery": [
             {"image": "gothic-vania-1.png"},
@@ -48,12 +48,12 @@
         "link": null,
         "github": "https://github.com/Yannis-Alouache/OBarbeuc",
         "technologies": [
-            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png"},
-            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png"},
-            {"name": "Python", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png"},
-            {"name": "Django", "image": "https://www.kojac.nl/tailwind/images/Frontend/django.png"},
-            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"},
-            {"name": "MySql", "image": "https://pngimg.com/uploads/mysql/mysql_PNG11.png"}
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "Python", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png", "id": "2"},
+            {"name": "Django", "image": "https://www.kojac.nl/tailwind/images/Frontend/django.png", "id": "3"},
+            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "4"},
+            {"name": "MySql", "image": "https://pngimg.com/uploads/mysql/mysql_PNG11.png", "id": "5"}
         ],
         "gallery": [
             {"image": "obarbeuc-1.png"},
