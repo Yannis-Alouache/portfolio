@@ -6,9 +6,6 @@ import image from "../Assets/Images/macbook.png"
 
 function Herobanner() {
 
-
-  
-
   useEffect(() => {
     const words = ["Hi. I'm Yannis.", "I turn ideas into real life products."]
     const title = document.getElementsByClassName("title")
