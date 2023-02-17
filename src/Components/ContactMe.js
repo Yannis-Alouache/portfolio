@@ -56,6 +56,9 @@ function ContactMe() {
           setMessage("")
           setIsLoading(false)
           form.current.reset()
+      })
+      .catch((error) => {
+        console.error(error)
       });
   };
 
