@@ -336,7 +336,7 @@ section {
 
 @media screen and (max-width: 768px) {
     .landing .wrapper .img {
-        width: 100%;
+        width: 80%;
     }
     .navbar .main-logo {
         margin-top: -10px;
