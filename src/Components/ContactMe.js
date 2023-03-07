@@ -116,7 +116,7 @@ function ContactMe() {
                     {isLoading ? (
                       <Button className='sendButton' disabled><CircularProgress size={20}/></Button>
                     ) : (
-                      <Button className='sendButton' onClick={sendEmail}>ENVOYER</Button>
+                      <Button className='sendButton' onClick={sendEmail}>SEND</Button>
                     )}
                   </form>
                 </Box>
