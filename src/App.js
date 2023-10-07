@@ -14,17 +14,19 @@ import projects from "./data/projectDetail.json"
 
 function App() {
 
-  let projectDetailAngryLlama = projects[0]
-  let projectMyCastleVania = projects[1]
-  let projectObarbeuc = projects[2]
   let projectPokeManiaque = projects[3]
   let projectDrivetty = projects[4]
+  let projectDetailAngryLlama = projects[0]
+  let projectETaxi = projects[5]
+  let projectMyCastleVania = projects[1]
+  let projectObarbeuc = projects[2]
 
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/project/e-taxi" element={<ProjectDetail {...projectETaxi} />} />
           <Route path="/project/angry-llama" element={<ProjectDetail {...projectDetailAngryLlama} />} />
           <Route path="/project/my-castlevania" element={<ProjectDetail {...projectMyCastleVania} />} />
           <Route path="/project/obarbeuc" element={<ProjectDetail {...projectObarbeuc} />} />

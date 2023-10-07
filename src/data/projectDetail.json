@@ -123,5 +123,39 @@
             "drivetty-13.png",
             "drivetty-14.png"
         ]
+    },
+    {
+        "name": "E-Taxi",
+        "description": "E-Taxi is a taxi booking site I crafted for a client.",
+        "link": "https://e-taxi-lille.fr",
+        "github": "https://github.com/Yannis-Alouache/e-taxi-v2",
+        "technologies": [
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "0"},
+            {"name": "Typescript", "image": "https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png", "id": "0"},
+            {"name": "NodeJs", "image": "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png", "id": "7"},
+            {"name": "Prisma", "image": "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3256746/file-type-light-prisma-icon-md.png", "id": "2"},
+            {"name": "Headless UI", "image": "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png", "id": "3"},
+            {"name": "Tailwind", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png", "id": "4"},
+            {"name": "NodeMailer", "image": "https://repository-images.githubusercontent.com/1272424/d1995000-0ab7-11ea-8ed3-04a082c36b0d", "id": "5"},
+            {"name": "Axios", "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/axios_logo_icon_168545.png", "id": "6"},
+            {"name": "NextJs", "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png", "id": "7"}
+        ],
+        "gallery": [
+            "drivetty-1.png",
+            "drivetty-2.png",
+            "drivetty-3.png",
+            "drivetty-4.png",
+            "drivetty-5.png",
+            "drivetty-6.png",
+            "drivetty-7.png",
+            "drivetty-8.png",
+            "drivetty-9.png",
+            "drivetty-10.png",
+            "drivetty-11.png",
+            "drivetty-12.png",
+            "drivetty-13.png",
+            "drivetty-14.png"
+        ]
     }
 ]
