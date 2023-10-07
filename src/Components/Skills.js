@@ -67,6 +67,12 @@ function Skills() {
                     <Grid item md={6}>
                         <Skill name="NPM" image="https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png"/>
                     </Grid>
+                    <Grid item md={6}>
+                        <Skill name="Angular" image="https://angular.io/assets/images/logos/angular/angular.svg"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="Spring Boot" image="https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-spring-boot-dashboard/0.13.2023072200/1689984300042/Microsoft.VisualStudio.Services.Icons.Default"/>
+                    </Grid>
                 </Grid>
             </Container>
         </section>

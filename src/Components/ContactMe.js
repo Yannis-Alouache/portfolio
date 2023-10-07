@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Box, Container } from '@mui/system';
 import { Grid, Link, TextField, Typography, Button } from '@mui/material';
 import { CircularProgress } from '@mui/material';
+import linkedinLogo from "../Assets/Images/linkedin-logo.png"
 
 function ContactMe() {
 
@@ -75,11 +76,20 @@ function ContactMe() {
                  Thank you for taking the time to visit my portfolio. <br></br> If you have any questions or would like to know more about my projects or my background, please feel free to contact me by filling out the form on the right. <br></br> I will be happy to answer you as soon as possible.
                 </p>
                 <p className='mt30'>Don't like forms ?</p>
-                <p> 
+                <p style={{marginBottom: "15px"}}> 
                   Email me at &nbsp;
                   <Link href="mailto:yannisalouache@gmail.com">yannisalouache@gmail.com</Link>
                 </p>
+
+                <Grid container spacing={7}>
+                  <Grid item xl={1}>
+                    <Link target='_blank' href="https://www.linkedin.com/in/yannis-alouache/">
+                      <img style={{width: "32px", height: "32px"}} src={linkedinLogo} />
+                    </Link>
+                  </Grid>
+                </Grid>
               </Grid>
+
               <Grid item xl={7}>
                 <Box autoComplete="off">
                   <form ref={form}>

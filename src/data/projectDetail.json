@@ -1,7 +1,7 @@
 [
     {
         "name": "AngryLLama",
-        "description": "AngryLLama est un site web présentant une collection nft crée par moi-même.",
+        "description": "AngryLLama is a website showcasing an NFT collection crafted by me.",
         "link": "https://angryllama.netlify.app",
         "github": "https://github.com/Yannis-Alouache/AngryLlama",
         "technologies": [
@@ -19,17 +19,11 @@
             "angry-llama-2.png",
             "angry-llama-3.png",
             "angry-llama-4.png"
-        ],
-        "infomations": [
-            {"name": "Javascript", "description": "Javascript est le language de progammation sur lequel repose le projet"},
-            {"name": "NPM", "description": "NPM est le node package manager utiliser pour l'installation de dépendences du projet"},
-            {"name": "React", "description": "React est le framework javascript frontend utiliser"},
-            {"name": "Bootstrap", "description": "Bootstrap est le framework CSS utiliser pour le projet"}
         ]
     },
     {
         "name": "GothicVania",
-        "description": "GothicVania est un jeu vidéo de type runner inpsiré de l'univers de CastleVania",
+        "description": "GothicVania is a runner-style video game inspired by the CastleVania universe.",
         "link": null,
         "github": "https://github.com/Yannis-Alouache/My_runner",
         "technologies": [
@@ -47,7 +41,7 @@
     },
     {
         "name": "OBarbeuc",
-        "description": "OBarbeuc est un site web représentant un restaurant fictif",
+        "description": "Barbeuc is a website portraying a fictional restaurant.",
         "link": null,
         "github": "https://github.com/Yannis-Alouache/OBarbeuc",
         "technologies": [
@@ -71,7 +65,7 @@
     },
     {
         "name": "Poke-Maniaque",
-        "description": "Poke-Maniaque est un site web permettant de visualiser toutes les cartes Pokémon",
+        "description": "Poke-Maniaque is a website that allows users to visualize all Pokémon cards.",
         "link": "https://poke-maniaque.netlify.app/",
         "github": "https://github.com/Yannis-Alouache/poke-maniaque",
         "technologies": [
@@ -94,7 +88,7 @@
     },
     {
         "name": "Drivetty",
-        "description": "Drivetty est un site de marketplace automobile CtoC",
+        "description": "Drivetty is a C2C automotive marketplace website.",
         "link": "https://drivetty.netlify.app/",
         "github": "https://github.com/Yannis-Alouache/drivetty",
         "technologies": [
@@ -114,10 +108,20 @@
             {"name": "RxJs", "image": "https://cdn.worldvectorlogo.com/logos/rxjs-1.svg", "id": "13"}
         ],
         "gallery": [
-            "poke-maniaque-1.png",
-            "poke-maniaque-2.png",
-            "poke-maniaque-3.png",
-            "poke-maniaque-4.png"
+            "drivetty-1.png",
+            "drivetty-2.png",
+            "drivetty-3.png",
+            "drivetty-4.png",
+            "drivetty-5.png",
+            "drivetty-6.png",
+            "drivetty-7.png",
+            "drivetty-8.png",
+            "drivetty-9.png",
+            "drivetty-10.png",
+            "drivetty-11.png",
+            "drivetty-12.png",
+            "drivetty-13.png",
+            "drivetty-14.png"
         ]
     }
 ]
