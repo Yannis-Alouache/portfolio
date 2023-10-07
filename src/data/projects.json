@@ -12,9 +12,21 @@
         "link": "/project/obarbeuc"
     },
     {
+        "name": "Poke-Maniaque - collection website",
+        "tag": "non profit / pokemon",
+        "image": "poke-maniaque.png",
+        "link": "/project/poke-maniaque"
+    },
+    {
+        "name": "Drivetty - car marketplace website",
+        "tag": "non profit / car",
+        "image": "drivetty.png",
+        "link": "/project/drivetty"
+    },
+    {
         "name": "GothicVania - Video Game",
         "tag": "non profit / Game",
-        "image": "gothic-vania-1.png",
+        "image": "gothic-vania-1.png",  
         "link": "/project/my-castlevania" 
     }
 ]

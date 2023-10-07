@@ -17,6 +17,8 @@ function App() {
   let projectDetailAngryLlama = projects[0]
   let projectMyCastleVania = projects[1]
   let projectObarbeuc = projects[2]
+  let projectPokeManiaque = projects[3]
+  let projectDrivetty = projects[4]
 
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
           <Route path="/project/angry-llama" element={<ProjectDetail {...projectDetailAngryLlama} />} />
           <Route path="/project/my-castlevania" element={<ProjectDetail {...projectMyCastleVania} />} />
           <Route path="/project/obarbeuc" element={<ProjectDetail {...projectObarbeuc} />} />
+          <Route path="/project/poke-maniaque" element={<ProjectDetail {...projectPokeManiaque} />} />
+          <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
         </Routes>
       </Router>
     </>

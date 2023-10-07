@@ -2,7 +2,7 @@
     {
         "name": "AngryLLama",
         "description": "AngryLLama est un site web présentant une collection nft crée par moi-même.",
-        "link": null,
+        "link": "https://angryllama.netlify.app",
         "github": "https://github.com/Yannis-Alouache/AngryLlama",
         "technologies": [
             {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
@@ -10,13 +10,15 @@
             {"name": "Javascript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png", "id": "2"},
             {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png", "id": "3"},
             {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png", "id": "4"},
-            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "5"}
+            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "5"},
+            {"name": "JestJs", "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/jest-js-icon.png", "id": "6"}
+
         ],
         "gallery": [
-            {"image": "angry-llama-1.png"},
-            {"image": "angry-llama-2.png"},
-            {"image": "angry-llama-3.png"},
-            {"image": "angry-llama-4.png"}
+            "angry-llama-1.png",
+            "angry-llama-2.png",
+            "angry-llama-3.png",
+            "angry-llama-4.png"
         ],
         "infomations": [
             {"name": "Javascript", "description": "Javascript est le language de progammation sur lequel repose le projet"},
@@ -33,13 +35,14 @@
         "technologies": [
             {"name": "C Programming Language", "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png", "id": "0"},
             {"name": "SFML", "image": "https://www.sfml-dev.org/download/goodies/sfml-icon-big.png", "id": "1"},
-            {"name": "MakeFile", "image": "https://maex.me/img/gnu.png", "id": "2"}
+            {"name": "MakeFile", "image": "https://maex.me/img/gnu.png", "id": "2"},
+            {"name": "Linux", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Icons8_flat_linux.svg/1200px-Icons8_flat_linux.svg.png", "id": "3"}
         ],
         "gallery": [
-            {"image": "gothic-vania-1.png"},
-            {"image": "gothic-vania-2.png"},
-            {"image": "gothic-vania-3.png"},
-            {"image": "gothic-vania-4.png"}
+            "gothic-vania-1.png",
+            "gothic-vania-2.png",
+            "gothic-vania-3.png",
+            "gothic-vania-4.png"
         ]
     },
     {
@@ -56,14 +59,65 @@
             {"name": "MySql", "image": "https://pngimg.com/uploads/mysql/mysql_PNG11.png", "id": "5"}
         ],
         "gallery": [
-            {"image": "obarbeuc-1.png"},
-            {"image": "obarbeuc-2.png"},
-            {"image": "obarbeuc-3.png"},
-            {"image": "obarbeuc-4.png"},
-            {"image": "obarbeuc-5.png"},
-            {"image": "obarbeuc-6.png"},
-            {"image": "obarbeuc-7.png"},
-            {"image": "obarbeuc-8.png"}
+            "obarbeuc-1.png",
+            "obarbeuc-2.png",
+            "obarbeuc-4.png",
+            "obarbeuc-5.png",
+            "obarbeuc-6.png",
+            "obarbeuc-3.png",
+            "obarbeuc-7.png",
+            "obarbeuc-8.png"
+        ]
+    },
+    {
+        "name": "Poke-Maniaque",
+        "description": "Poke-Maniaque est un site web permettant de visualiser toutes les cartes Pokémon",
+        "link": "https://poke-maniaque.netlify.app/",
+        "github": "https://github.com/Yannis-Alouache/poke-maniaque",
+        "technologies": [
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png", "id": "2"},
+            {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png", "id": "3"},
+            {"name": "React", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png", "id": "4"},
+            {"name": "TailWind", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "5"},
+            {"name": "HeadlessUi", "image": "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png", "id": "6"},
+            {"name": "JestJs", "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/jest-js-icon.png", "id": "7"},
+            {"name": "Axios", "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/axios_logo_icon_168545.png", "id": "8"}
+        ],
+        "gallery": [
+            "poke-maniaque-1.png",
+            "poke-maniaque-2.png",
+            "poke-maniaque-3.png",
+            "poke-maniaque-4.png"
+        ]
+    },
+    {
+        "name": "Drivetty",
+        "description": "Drivetty est un site de marketplace automobile CtoC",
+        "link": "https://drivetty.netlify.app/",
+        "github": "https://github.com/Yannis-Alouache/drivetty",
+        "technologies": [
+            {"name": "Java", "image": "https://cdn-icons-png.flaticon.com/512/226/226777.png", "id": "0"},
+            {"name": "Maven", "image": "https://static-00.iconduck.com/assets.00/maven-icon-1152x2048-p475j6s5.png", "id": "1"},
+            {"name": "Spring Boot", "image": "https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-spring-boot-dashboard/0.13.2023072200/1689984300042/Microsoft.VisualStudio.Services.Icons.Default", "id": "2"},
+            {"name": "MySql", "image": "https://pngimg.com/uploads/mysql/mysql_PNG11.png", "id": "3"},
+            {"name": "Lombok", "image": "https://plugins.jetbrains.com/files/6317/395442/icon/pluginIcon.png", "id": "4"},
+            {"name": "JPA", "image": "https://static-00.iconduck.com/assets.00/hibernate-icon-1965x2048-qkmfg47d.png", "id": "5"},
+            {"name": "JsonWebToken (JWT)", "image": "https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png", "id": "6"},
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "7"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "8"},
+            {"name": "Typescript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png", "id": "9"},
+            {"name": "NPM", "image": "https://seeklogo.com/images/N/npm-logo-01B8642EDD-seeklogo.com.png", "id": "10"},
+            {"name": "Angular", "image": "https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg", "id": "11"},
+            {"name": "Bootstrap", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png", "id": "12"},
+            {"name": "RxJs", "image": "https://cdn.worldvectorlogo.com/logos/rxjs-1.svg", "id": "13"}
+        ],
+        "gallery": [
+            "poke-maniaque-1.png",
+            "poke-maniaque-2.png",
+            "poke-maniaque-3.png",
+            "poke-maniaque-4.png"
         ]
     }
 ]
