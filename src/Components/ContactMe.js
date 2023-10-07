@@ -84,7 +84,7 @@ function ContactMe() {
                 <Grid container spacing={7}>
                   <Grid item xl={1}>
                     <Link target='_blank' href="https://www.linkedin.com/in/yannis-alouache/">
-                      <img style={{width: "32px", height: "32px"}} src={linkedinLogo} />
+                      <img style={{width: "32px", height: "32px"}} alt='linkedin' src={linkedinLogo} />
                     </Link>
                   </Grid>
                 </Grid>

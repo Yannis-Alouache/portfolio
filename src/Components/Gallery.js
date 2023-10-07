@@ -14,7 +14,6 @@ function Gallery(props) {
     const openImageViewer = useCallback((index) => {
         setIsViewerOpen(true);
         setCurrentImage(index);
-        console.log(images);
     }, []);
     
     const closeImageViewer = () => {
@@ -28,7 +27,7 @@ function Gallery(props) {
                 setImages(images => images.concat(require("../Assets/Images/" + item)))
             )
         })
-    }, [])
+    }, [gallery])
 
   return (
     <Container sx={{marginBottom: "7em"}} maxWidth="lg">
