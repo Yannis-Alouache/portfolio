@@ -56,7 +56,7 @@ function Skills() {
                         <Skill name="Nginx" image="https://www.juliosblog.com/content/images/size/w2000/2016/06/nginx-smalllogo.png"/>
                     </Grid>
                     <Grid item md={6}>
-                        <Skill name="Express" image="https://i.postimg.cc/8kqSDLNP/pngwing-com.png"/>
+                        <Skill name="ExpressJs" image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Status_iucn_EX_icon_blank.svg/2048px-Status_iucn_EX_icon_blank.svg.png"/>
                     </Grid>
                     <Grid item md={6}>
                         <Skill name="Django" image="https://www.kojac.nl/tailwind/images/Frontend/django.png"/>
@@ -72,6 +72,12 @@ function Skills() {
                     </Grid>
                     <Grid item md={6}>
                         <Skill name="Spring Boot" image="https://vscjava.gallerycdn.vsassets.io/extensions/vscjava/vscode-spring-boot-dashboard/0.13.2023072200/1689984300042/Microsoft.VisualStudio.Services.Icons.Default"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="NextJS" image="https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="NodeMailer" image="https://repository-images.githubusercontent.com/1272424/d1995000-0ab7-11ea-8ed3-04a082c36b0d"/>
                     </Grid>
                 </Grid>
             </Container>
