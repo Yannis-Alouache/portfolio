@@ -131,15 +131,43 @@
         "github": "https://github.com/Yannis-Alouache/e-taxi-v2",
         "technologies": [
             {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
-            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "0"},
-            {"name": "Typescript", "image": "https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png", "id": "0"},
-            {"name": "NodeJs", "image": "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png", "id": "7"},
-            {"name": "Prisma", "image": "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3256746/file-type-light-prisma-icon-md.png", "id": "2"},
-            {"name": "Headless UI", "image": "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png", "id": "3"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "Typescript", "image": "https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png", "id": "2"},
+            {"name": "NodeJs", "image": "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png", "id": "3"},
+            {"name": "Prisma", "image": "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3256746/file-type-light-prisma-icon-md.png", "id": "4"},
+            {"name": "Headless UI", "image": "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png", "id": "5"},
+            {"name": "Tailwind", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png", "id": "6"},
+            {"name": "NodeMailer", "image": "https://repository-images.githubusercontent.com/1272424/d1995000-0ab7-11ea-8ed3-04a082c36b0d", "id": "7"},
+            {"name": "Axios", "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/axios_logo_icon_168545.png", "id": "8"},
+            {"name": "NextJs", "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png", "id": "9"}
+        ],
+        "gallery": [
+            "e-taxi.png",
+            "e-taxi-2.png",
+            "e-taxi-3.png",
+            "e-taxi-4.png",
+            "e-taxi-5.png",
+            "e-taxi-6.png"
+        ]
+    },
+    {
+        "name": "Falcon Marketing",
+        "description": "Falcon Marketing is a salesman recruiting agency",
+        "link": "https://falconmarketing.fr/",
+        "github": "https://github.com/Yannis-Alouache/falcon-marketing",
+        "technologies": [
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png", "id": "2"},
+            {"name": "NodeJs", "image": "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png", "id": "3"},
             {"name": "Tailwind", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png", "id": "4"},
-            {"name": "NodeMailer", "image": "https://repository-images.githubusercontent.com/1272424/d1995000-0ab7-11ea-8ed3-04a082c36b0d", "id": "5"},
+            {"name": "EmailJs", "image": "https://www.emailjs.com/logo.png", "id": "5"},
             {"name": "Axios", "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/axios_logo_icon_168545.png", "id": "6"},
-            {"name": "NextJs", "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png", "id": "7"}
+            {"name": "NextJs", "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png", "id": "7"},
+            {"name": "Framer Motion", "image": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg", "id": "8"},
+            {"name": "Sanity", "image": "https://www.sanity.io/static/images/logo_rounded_square.png", "id": "9"},
+            {"name": "Slick Carousel", "image": "https://miro.medium.com/v2/resize:fit:400/1*aKWn6xdhyX7V1IupgXah4Q.png", "id": "10"}
+
         ],
         "gallery": [
             "e-taxi.png",

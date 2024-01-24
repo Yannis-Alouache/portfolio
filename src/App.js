@@ -10,14 +10,12 @@ import ProjectDetail from "./Pages/ProjectDetail.js";
 import projects from "./data/projectDetail.json"
 
 
-
-
 function App() {
-
   let projectPokeManiaque = projects[3]
   let projectDrivetty = projects[4]
   let projectDetailAngryLlama = projects[0]
   let projectETaxi = projects[5]
+  let projectFalconMarketing = projects[6]
   let projectMyCastleVania = projects[1]
   let projectObarbeuc = projects[2]
 
@@ -32,6 +30,7 @@ function App() {
           <Route path="/project/obarbeuc" element={<ProjectDetail {...projectObarbeuc} />} />
           <Route path="/project/poke-maniaque" element={<ProjectDetail {...projectPokeManiaque} />} />
           <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
+          <Route path="/project/falcon-marketing" element={<ProjectDetail {...projectFalconMarketing} />} />
         </Routes>
       </Router>
     </>

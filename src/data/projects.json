@@ -1,5 +1,17 @@
 [
     {
+        "name": "Falcon Marketing - Salesman Agency",
+        "tag": "work / sales / marketing",
+        "image": "falcon-marketing-1.png",
+        "link": "/project/falcon-marketing"
+    },
+    {
+        "name": "MyCarz - Garage website",
+        "tag": "work / car / freelance",
+        "image": "mycarz-1.png",
+        "link": "/project/mycarz"
+    },
+    {
         "name": "Poke-Maniaque - collection website",
         "tag": "non profit / pokemon",
         "image": "poke-maniaque.png",
