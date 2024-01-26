@@ -16,6 +16,7 @@ function App() {
   let projectDetailAngryLlama = projects[0]
   let projectETaxi = projects[5]
   let projectFalconMarketing = projects[6]
+  let projectMyCarz = projects[7]
   let projectMyCastleVania = projects[1]
   let projectObarbeuc = projects[2]
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/project/poke-maniaque" element={<ProjectDetail {...projectPokeManiaque} />} />
           <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
           <Route path="/project/falcon-marketing" element={<ProjectDetail {...projectFalconMarketing} />} />
+          <Route path="/project/mycarz" element={<ProjectDetail {...projectMyCarz} />} />
         </Routes>
       </Router>
     </>

@@ -170,12 +170,46 @@
 
         ],
         "gallery": [
-            "e-taxi.png",
-            "e-taxi-2.png",
-            "e-taxi-3.png",
-            "e-taxi-4.png",
-            "e-taxi-5.png",
-            "e-taxi-6.png"
+            "falcon-marketing-1.png",
+            "falcon-marketing-2.png",
+            "falcon-marketing-3.png",
+            "falcon-marketing-4.png",
+            "falcon-marketing-5.png",
+            "falcon-marketing-6.png",
+            "falcon-marketing-7.png",
+            "falcon-marketing-8.png",
+            "falcon-marketing-9.png"
+        ]
+    },
+    {
+        "name": "MyCarz",
+        "description": "MyCarz is a garage website made for a client based in Roubaix",
+        "link": "https://mycarz.fr/",
+        "github": "https://github.com/Yannis-Alouache/MyCarz",
+        "technologies": [
+            {"name": "HTML 5", "image": "https://cdn-icons-png.flaticon.com/512/732/732212.png", "id": "0"},
+            {"name": "CSS 3", "image": "https://cdn-icons-png.flaticon.com/512/732/732190.png", "id": "1"},
+            {"name": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png", "id": "2"},
+            {"name": "NodeJs", "image": "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png", "id": "3"},
+            {"name": "Tailwind", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png", "id": "4"},
+            {"name": "EmailJs", "image": "https://www.emailjs.com/logo.png", "id": "5"},
+            {"name": "Axios", "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/axios_logo_icon_168545.png", "id": "6"},
+            {"name": "NextJs", "image": "https://static-00.iconduck.com/assets.00/nextjs-icon-512x512-y563b8iq.png", "id": "7"},
+            {"name": "Framer Motion", "image": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg", "id": "8"}
+        ],
+        "gallery": [
+            "mycarz-1.png",
+            "mycarz-2.png",
+            "mycarz-3.png",
+            "mycarz-4.png",
+            "mycarz-5.png",
+            "mycarz-6.png",
+            "mycarz-7.png",
+            "mycarz-8.png",
+            "mycarz-9.png",
+            "mycarz-10.png",
+            "mycarz-11.png",
+            "mycarz-12.png"
         ]
     }
 ]

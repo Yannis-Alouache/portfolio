@@ -41,9 +41,6 @@ function Skills() {
                         <Skill name="Tailwind" image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"/>
                     </Grid>
                     <Grid item md={6}>
-                        <Skill name="Styled Component" image="https://avatars.githubusercontent.com/u/20658825?s=200&v=4"/>
-                    </Grid>
-                    <Grid item md={6}>
                         <Skill name="Mongo Db" image="https://miro.medium.com/max/512/1*doAg1_fMQKWFoub-6gwUiQ.png"/>
                     </Grid>
                     <Grid item md={6}>
@@ -78,6 +75,15 @@ function Skills() {
                     </Grid>
                     <Grid item md={6}>
                         <Skill name="NodeMailer" image="https://repository-images.githubusercontent.com/1272424/d1995000-0ab7-11ea-8ed3-04a082c36b0d"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="EmailJs" image="https://www.emailjs.com/logo.png"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="Framer Motion" image="https://cdn.worldvectorlogo.com/logos/framer-motion.svg"/>
+                    </Grid>
+                    <Grid item md={6}>
+                        <Skill name="Sanity" image="https://www.sanity.io/static/images/logo_rounded_square.png"/>
                     </Grid>
                 </Grid>
             </Container>
