@@ -3,8 +3,9 @@ import resume from '../Assets/Pdf/CV.pdf'
 
 const ROLES = [
   'Développeur Full-Stack.',
-  'React · Node · Python.',
-  "Créateur d'expériences web.",
+  'Appétence Back-end.',
+  'Software craftsmanship & TDD.',
+  'Architecture & code propre.',
 ]
 
 function useTypewriter(words, speed = 70, pause = 1800) {
@@ -48,7 +49,7 @@ function useTypewriter(words, speed = 70, pause = 1800) {
 
 function Herobanner() {
   const typed = useTypewriter(ROLES)
-  const yearsOfCode = new Date().getFullYear() - 2019
+  const yearsOfXp = Math.max(1, new Date().getFullYear() - 2023)
 
   return (
     <section className='hero'>
@@ -69,8 +70,9 @@ function Herobanner() {
           </div>
 
           <p className='hero-sub'>
-            Je transforme des idées en produits web modernes, accessibles et centrés sur
-            l'utilisateur. Basé à Lille, je travaille aussi bien côté front que côté back.
+            Full-stack avec une appétence marquée pour le back-end, je mise sur le
+            software craftsmanship : architecture soignée, TDD et code maintenable.
+            Basé à Lille.
           </p>
 
           <div className='hero-actions'>
@@ -93,10 +95,10 @@ function Herobanner() {
             </div>
             <div>
               <div className='stat-value'>
-                {yearsOfCode}
+                {yearsOfXp}
                 <span className='plus'>+</span>
               </div>
-              <div className='stat-label'>Années de code</div>
+              <div className='stat-label'>Années d'expérience</div>
             </div>
           </div>
         </div>
@@ -120,19 +122,23 @@ function Herobanner() {
               <span className='punc'>:</span> <span className='str'>"Développeur Full-Stack"</span>
               <span className='punc'>,</span>
               {'\n  '}
+              <span className='key'>appetence</span>
+              <span className='punc'>:</span> <span className='str'>"Back-end"</span>
+              <span className='punc'>,</span>
+              {'\n  '}
               <span className='key'>localisation</span>
               <span className='punc'>:</span> <span className='str'>"Lille, France"</span>
               <span className='punc'>,</span>
               {'\n  '}
               <span className='key'>stack</span>
               <span className='punc'>:</span> <span className='punc'>[</span>
-              <span className='str'>"React"</span>
-              <span className='punc'>,</span> <span className='str'>"Node"</span>
-              <span className='punc'>,</span> <span className='str'>"Python"</span>
+              <span className='str'>"NestJS"</span>
+              <span className='punc'>,</span> <span className='str'>"Spring Boot"</span>
+              <span className='punc'>,</span> <span className='str'>"Angular"</span>
               <span className='punc'>],</span>
               {'\n  '}
               <span className='key'>focus</span>
-              <span className='punc'>:</span> <span className='str'>"UX & produits web"</span>
+              <span className='punc'>:</span> <span className='str'>"Software craftsmanship & TDD"</span>
               <span className='punc'>,</span>
               {'\n  '}
               <span className='key'>openToWork</span>

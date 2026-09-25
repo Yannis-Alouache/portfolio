@@ -3,7 +3,9 @@ import React from 'react'
 function Skill({ name, icon, invert }) {
   return (
     <span className='skill-chip'>
-      <img className={invert ? 'invert' : ''} alt={name} src={icon} loading='lazy' />
+      {icon && (
+        <img className={invert ? 'invert' : ''} alt={name} src={icon} loading='lazy' />
+      )}
       {name}
     </span>
   )
