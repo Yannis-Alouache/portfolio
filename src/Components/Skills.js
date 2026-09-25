@@ -50,7 +50,7 @@ const GROUPS = [
       { name: 'Linux', icon: devicon('linux') },
       { name: 'Kubernetes (K9s)', icon: devicon('kubernetes') },
       { name: 'CI/CD', icon: devicon('githubactions') },
-      { name: 'Datadog', icon: null },
+      { name: 'Datadog', icon: 'https://cdn.simpleicons.org/datadog/white' },
       { name: 'Jest', icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/jest-js-icon.png' },
       { name: 'TDD', icon: null },
     ],
