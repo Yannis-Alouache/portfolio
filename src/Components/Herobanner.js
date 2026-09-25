@@ -1,80 +1,167 @@
+import React, { useEffect, useState } from 'react'
+import resume from '../Assets/Pdf/CV.pdf'
 
-import React, { useEffect } from 'react'
-import Grid from '@mui/material/Grid';
-import { Container } from '@mui/system'
-import image from "../Assets/Images/macbook.png"
+const ROLES = [
+  'Développeur Full-Stack.',
+  'React · Node · Python.',
+  "Créateur d'expériences web.",
+]
 
-function Herobanner() {
+function useTypewriter(words, speed = 70, pause = 1800) {
+  const [text, setText] = useState('')
 
   useEffect(() => {
-    const words = ["Hi. I'm Yannis.", "I turn ideas into real life products."]
-    const title = document.getElementsByClassName("title")
-    const len = words.length;
-    const speed = 75;
-    const skip_delay = 15;
-  
-    let skip_count = 0;
-    let forwards = true;
-    let offset = 0;
-    let i = 0;
-    let part;
-    
-    function animateTitle() {
-      setInterval(function () {
-        if (forwards) {
-          if (offset >= words[i].length) {
-            ++skip_count;
-            if (skip_count === skip_delay) {
-              forwards = false;
-              skip_count = 0;
-            }
-          }
+    let wordIndex = 0
+    let charIndex = 0
+    let deleting = false
+    let timer
+
+    const tick = () => {
+      const word = words[wordIndex]
+      if (!deleting) {
+        charIndex++
+        setText(word.slice(0, charIndex))
+        if (charIndex === word.length) {
+          deleting = true
+          timer = setTimeout(tick, pause)
+          return
         }
-        else {
-          if (offset === 0) {
-            forwards = true;
-            i++;
-            offset = 0;
-            if (i >= len) {
-              i = 0;
-            }
-          }
+        timer = setTimeout(tick, speed)
+      } else {
+        charIndex--
+        setText(word.slice(0, charIndex))
+        if (charIndex === 0) {
+          deleting = false
+          wordIndex = (wordIndex + 1) % words.length
         }
-        part = words[i].substr(0, offset);
-        if (skip_count === 0) {
-          if (forwards) {
-            offset++;
-          }
-          else {
-            offset--;
-          }
-        }
-        title[0].innerHTML = part
-      }, speed);
+        timer = setTimeout(tick, speed / 2)
+      }
     }
-    animateTitle()
+
+    timer = setTimeout(tick, speed)
+    return () => clearTimeout(timer)
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  return text
+}
+
+function Herobanner() {
+  const typed = useTypewriter(ROLES)
+  const yearsOfCode = new Date().getFullYear() - 2019
+
   return (
-    <>
-      <section className="flex landing">
-        <Container className="self-center" maxWidth='xl'>
-          <Grid container spacing={4}>
-              <Grid item className='text-centerv' xs={12} xl={6} sm={12}>
-                <div>
-                  <div className='title'></div>
-                  <p className='subtitle'>I'm also a fullstack developer building web application centered around user experience.</p>
-                </div>
-              </Grid>
-              <Grid item xs={12} xl={6} sm={12}>
-                <div className='wrapper'>
-                  <img className='center-img relative animate__animated animate__bounceInDown animate__slow img' alt='pc' src={image} />
-                </div>
-              </Grid>
-          </Grid>
-        </Container>
-      </section>
-    </>
+    <section className='hero'>
+      <div className='container hero-grid'>
+        <div>
+          <div className='hero-badge'>
+            <span className='dot' />
+            Disponible pour de nouvelles opportunités
+          </div>
+
+          <p className='hero-hello'>Bonjour, moi c'est</p>
+          <h1 className='hero-title'>
+            Yannis <span className='grad-text'>Alouache</span>
+          </h1>
+          <div className='hero-typed'>
+            {typed}
+            <span className='caret' />
+          </div>
+
+          <p className='hero-sub'>
+            Je transforme des idées en produits web modernes, accessibles et centrés sur
+            l'utilisateur. Basé à Lille, je travaille aussi bien côté front que côté back.
+          </p>
+
+          <div className='hero-actions'>
+            <a href='#projects' className='btn btn-primary'>
+              Découvrir mes projets <span className='arrow'>→</span>
+            </a>
+            <a href={resume} target='_blank' rel='noreferrer' className='btn btn-ghost'>
+              Télécharger mon CV
+            </a>
+          </div>
+
+          <div className='hero-stats'>
+            <div>
+              <div className='stat-value'>8</div>
+              <div className='stat-label'>Projets livrés</div>
+            </div>
+            <div>
+              <div className='stat-value'>3</div>
+              <div className='stat-label'>Missions freelance</div>
+            </div>
+            <div>
+              <div className='stat-value'>
+                {yearsOfCode}
+                <span className='plus'>+</span>
+              </div>
+              <div className='stat-label'>Années de code</div>
+            </div>
+          </div>
+        </div>
+
+        <div className='code-window-wrap'>
+          <div className='code-window'>
+            <div className='code-window-bar'>
+              <span className='code-dot red' />
+              <span className='code-dot yellow' />
+              <span className='code-dot green' />
+              <span className='code-tab'>yannis.config.js</span>
+            </div>
+            <div className='code-body'>
+              <span className='kw'>const</span> <span className='var'>developpeur</span> <span className='punc'>= {'{'}</span>
+              {'\n  '}
+              <span className='key'>nom</span>
+              <span className='punc'>:</span> <span className='str'>"Yannis Alouache"</span>
+              <span className='punc'>,</span>
+              {'\n  '}
+              <span className='key'>role</span>
+              <span className='punc'>:</span> <span className='str'>"Développeur Full-Stack"</span>
+              <span className='punc'>,</span>
+              {'\n  '}
+              <span className='key'>localisation</span>
+              <span className='punc'>:</span> <span className='str'>"Lille, France"</span>
+              <span className='punc'>,</span>
+              {'\n  '}
+              <span className='key'>stack</span>
+              <span className='punc'>:</span> <span className='punc'>[</span>
+              <span className='str'>"React"</span>
+              <span className='punc'>,</span> <span className='str'>"Node"</span>
+              <span className='punc'>,</span> <span className='str'>"Python"</span>
+              <span className='punc'>],</span>
+              {'\n  '}
+              <span className='key'>focus</span>
+              <span className='punc'>:</span> <span className='str'>"UX & produits web"</span>
+              <span className='punc'>,</span>
+              {'\n  '}
+              <span className='key'>openToWork</span>
+              <span className='punc'>:</span> <span className='bool'>true</span>
+              <span className='punc'>,</span>
+              {'\n'}
+              <span className='punc'>{'};'}</span>
+              {'\n\n'}
+              <span className='comment'>{'// Toujours prêt pour un nouveau défi'}</span>
+              {'\n'}
+              <span className='kw'>while</span> <span className='punc'>(</span>
+              <span className='var'>curieux</span>
+              <span className='punc'>) {'{'}</span> <span className='var'>apprendre</span>
+              <span className='punc'>();</span> <span className='var'>créer</span>
+              <span className='punc'>(); {'}'}</span>
+            </div>
+          </div>
+
+          <div className='float-chip react'>
+            <img
+              alt='React'
+              src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+            />
+            React
+          </div>
+          <div className='float-chip ship'>🚀 8 projets livrés</div>
+        </div>
+      </div>
+    </section>
   )
 }
 

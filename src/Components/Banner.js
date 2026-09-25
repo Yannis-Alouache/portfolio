@@ -1,35 +1,32 @@
 import React from 'react'
-import { Alert, Box, Grid, Typography } from '@mui/material'
-import { Link } from '@mui/material'
-import { Container } from '@mui/system'
+import { Link } from 'react-router-dom'
 
-function Banner(props) {
-    let {name, description, link} = props
-    return (
-        <Box className="self-center bannerWrapper" maxWidth='lg'>
-            <Container>
-                <Grid container>
-                    <Grid item className='text-centerv' md={12}>
-                        <Typography variant='h3'>
-                            {name}
-                        </Typography>
-                    </Grid>
-                    <Grid item className='text-centerv' md={12}>
-                        <p>{description}</p>
-                    </Grid>
-                    <Grid item px={{paddingTop: "20px"}} className='text-centerv' md={12}>
-                        {link 
-                            ? <Link className='linkToProject' href={link}>{link}</Link>
-                        
-                            : <Alert px={{paddingRight: "20px"}} severity="error">
-                                Ce projet n'étant pas encore hébergé, il ne possède pas de lien
-                            </Alert>
-                        }
-                    </Grid>
-                </Grid>
-            </Container>
-        </Box>
-    )
+function Banner({ name, description, link, github }) {
+  return (
+    <section className='detail-hero'>
+      <div className='container'>
+        <Link to='/' className='back-link'>
+          ← Retour aux projets
+        </Link>
+        <h1 className='detail-title'>{name}</h1>
+        <p className='detail-desc'>{description}</p>
+        <div className='detail-actions'>
+          {link ? (
+            <a className='btn btn-primary' href={link} target='_blank' rel='noreferrer'>
+              Visiter le site <span className='arrow'>↗</span>
+            </a>
+          ) : (
+            <span className='tag'>Non hébergé pour le moment</span>
+          )}
+          {github && (
+            <a className='btn btn-ghost' href={github} target='_blank' rel='noreferrer'>
+              Voir sur GitHub <span className='arrow'>↗</span>
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Banner

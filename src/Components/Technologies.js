@@ -1,29 +1,24 @@
 import React from 'react'
-import Container from '@mui/material/Container'
-import { Typography } from '@mui/material'
-import Skill from '../Components/Skill'
-import { Grid } from '@mui/material'
+import Skill from './Skill'
 
-function Technologies(props) {
-    let { technologies } = props
-
+function Technologies({ technologies }) {
   return (
-    <Container sx={{marginBottom: "7em"}} maxWidth="lg">
-        <Typography variant="h3">
-            Technologies
-        </Typography> 
-        <section className='skills'>
-            <Grid container>
-              {technologies.map(function(technologie) {
-                return (
-                  <Grid item key={technologie.id} md={6}>
-                    <Skill name={technologie.name} image={technologie.image}/>
-                  </Grid>
-                )
-              })}
-            </Grid>
-        </section>
-    </Container>
+    <div className='container detail-section'>
+      <span className='overline'>Stack</span>
+      <h2 className='section-title' style={{ fontSize: '28px' }}>
+        Technologies utilisées
+      </h2>
+      <div className='skill-chips'>
+        {technologies.map(technologie => (
+          <Skill
+            key={technologie.id}
+            name={technologie.name}
+            icon={technologie.image}
+            invert={technologie.invert}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
 

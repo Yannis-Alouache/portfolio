@@ -1,18 +1,20 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import Herobanner from "../Components/Herobanner";
-import Projects from "../Components/Projects";
-import ContactMe from "../Components/ContactMe"
-import Skills from "../Components/Skills";
+import ScrollProgress from '../Components/ScrollProgress'
+import Herobanner from '../Components/Herobanner'
+import Skills from '../Components/Skills'
+import Projects from '../Components/Projects'
+import ContactMe from '../Components/ContactMe'
 
 function Home() {
   return (
     <>
-        <Navbar />
-        <Herobanner />
-        <Skills />
-        <Projects />
-        <ContactMe />
+      <ScrollProgress />
+      <Navbar />
+      <Herobanner />
+      <Skills />
+      <Projects />
+      <ContactMe />
     </>
   )
 }

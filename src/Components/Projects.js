@@ -1,22 +1,27 @@
 import React from 'react'
+import SectionHeader from './SectionHeader'
+import Reveal from './Reveal'
 import Project from './Project'
-import Grid from '@mui/material/Grid';
-import { Container } from '@mui/system'
-
-import projects from "../data/projects.json"
+import projects from '../data/projects.json'
 
 function Projects() {
   return (
-    <section className='projects'>
-      <Container className="self-center" maxWidth='lg'>
-          <Grid container spacing={10}>
-            {projects.map(project => (
-              <Grid item xs={12} xl={6} sm={6} key={project.name}>
-                <Project name={project.name} tag={project.tag} image={project.image} link={project.link}/>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+    <section className='section' id='projects'>
+      <div className='container'>
+        <SectionHeader
+          overline='Portfolio'
+          title='Projets'
+          highlight='sélectionnés'
+          sub="Des sites livrés pour des clients freelance et des projets personnels qui m'ont fait grandir. Cliquez sur une carte pour explorer le projet en détail."
+        />
+        <div className='projects-grid'>
+          {projects.map((project, index) => (
+            <Reveal key={project.name} delay={(index % 2) * 130}>
+              <Project {...project} />
+            </Reveal>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
