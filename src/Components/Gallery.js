@@ -7,10 +7,7 @@ function Gallery({ gallery }) {
 
   return (
     <div className='container detail-section'>
-      <span className='overline'>Aperçus</span>
-      <h2 className='section-title' style={{ fontSize: '28px' }}>
-        Galerie
-      </h2>
+      <h2 className='section-title'>Galerie</h2>
       <div className='gallery-grid'>
         {gallery.map((item, index) => (
           <img
@@ -29,6 +26,7 @@ function Gallery({ gallery }) {
           currentIndex={viewer.index}
           disableScroll={true}
           closeOnClickOutside={true}
+          backgroundStyle={{ zIndex: 100 }}
           onClose={() => setViewer({ open: false, index: 0 })}
         />
       )}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Stack, Layout, Wrench, Brain, PlugsConnected, PuzzlePiece, Compass, ClipboardText, ChatCircleText, TestTube } from '@phosphor-icons/react'
 import SectionHeader from './SectionHeader'
 import Reveal from './Reveal'
 import Skill from './Skill'
@@ -9,7 +10,7 @@ const devicon = (name, variant = 'original') =>
 const GROUPS = [
   {
     title: 'Back-end',
-    icon: '⚙',
+    icon: Stack,
     skills: [
       { name: 'NestJS', icon: devicon('nestjs') },
       { name: 'Node.js', icon: devicon('nodejs') },
@@ -18,18 +19,18 @@ const GROUPS = [
       { name: 'TypeScript', icon: devicon('typescript') },
       { name: 'Python', icon: devicon('python') },
       { name: 'Django', icon: devicon('django') },
-      { name: 'Express', icon: devicon('express'), invert: true },
+      { name: 'Express', icon: devicon('express') },
       { name: 'MySQL', icon: devicon('mysql') },
       { name: 'MongoDB', icon: devicon('mongodb') },
     ],
   },
   {
     title: 'Front-end',
-    icon: '</>',
+    icon: Layout,
     skills: [
       { name: 'React', icon: devicon('react') },
       { name: 'Angular', icon: devicon('angular') },
-      { name: 'Next.js', icon: devicon('nextjs'), invert: true },
+      { name: 'Next.js', icon: devicon('nextjs') },
       { name: 'JavaScript', icon: devicon('javascript') },
       { name: 'HTML 5', icon: devicon('html5') },
       { name: 'CSS 3', icon: devicon('css3') },
@@ -41,18 +42,32 @@ const GROUPS = [
   },
   {
     title: 'Outils & environnements',
-    icon: '◇',
+    icon: Wrench,
     skills: [
       { name: 'Git', icon: devicon('git') },
-      { name: 'GitHub', icon: devicon('github'), invert: true },
+      { name: 'GitHub', icon: devicon('github') },
       { name: 'NPM', icon: devicon('npm', 'original-wordmark') },
       { name: 'Nginx', icon: devicon('nginx') },
       { name: 'Linux', icon: devicon('linux') },
       { name: 'Kubernetes (K9s)', icon: devicon('kubernetes') },
       { name: 'CI/CD', icon: devicon('githubactions') },
-      { name: 'Datadog', icon: 'https://cdn.simpleicons.org/datadog/white' },
+      { name: 'Datadog', icon: 'https://cdn.simpleicons.org/datadog' },
       { name: 'Jest', icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/jest-js-icon.png' },
-      { name: 'TDD', icon: null },
+      { name: 'TDD', Icon: TestTube },
+    ],
+  },
+  {
+    title: 'IA & développement assisté',
+    icon: Brain,
+    ai: true,
+    skills: [
+      { name: 'Claude Code', icon: 'https://cdn.simpleicons.org/claude' },
+      { name: 'GitHub Copilot', icon: 'https://cdn.simpleicons.org/githubcopilot' },
+      { name: 'MCP', Icon: PlugsConnected },
+      { name: 'Skills & agents', Icon: PuzzlePiece },
+      { name: 'BMAD-METHOD', Icon: Compass },
+      { name: 'Spec-Driven Development', Icon: ClipboardText },
+      { name: 'Prompt engineering', Icon: ChatCircleText },
     ],
   },
 ]
@@ -62,17 +77,15 @@ function Skills() {
     <section className='section' id='skills'>
       <div className='container'>
         <SectionHeader
-          overline='Compétences'
-          title='Ma boîte à'
-          highlight='outils'
+          title='Ma boîte à outils'
           sub="Les technologies que j'utilise au quotidien pour concevoir, développer et déployer des applications web complètes."
         />
         <div className='skills-grid'>
           {GROUPS.map((group, index) => (
-            <Reveal key={group.title} delay={index * 120}>
-              <div className='skill-group'>
+            <Reveal key={group.title} delay={index * 90}>
+              <div className={`skill-group ${group.ai ? 'ai-group' : ''}`}>
                 <h3 className='skill-group-title'>
-                  <span className='icon'>{group.icon}</span>
+                  <span className='icon'><group.icon size={19} weight='duotone' /></span>
                   {group.title}
                 </h3>
                 <div className='skill-chips'>

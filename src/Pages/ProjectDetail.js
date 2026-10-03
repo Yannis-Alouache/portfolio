@@ -20,6 +20,7 @@ function ProjectDetail(props) {
       <Banner name={name} description={description} link={link} github={github} />
       <Technologies technologies={technologies} />
       <Gallery gallery={gallery} />
+      <div className='detail-spacer' />
     </>
   )
 }

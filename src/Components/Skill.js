@@ -1,11 +1,10 @@
 import React from 'react'
 
-function Skill({ name, icon, invert }) {
+function Skill({ name, icon, Icon }) {
   return (
     <span className='skill-chip'>
-      {icon && (
-        <img className={invert ? 'invert' : ''} alt={name} src={icon} loading='lazy' />
-      )}
+      {icon && <img alt={name} src={icon} loading='lazy' />}
+      {Icon && <Icon size={15} weight='regular' />}
       {name}
     </span>
   )

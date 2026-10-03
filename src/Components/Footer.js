@@ -6,7 +6,7 @@ function Footer() {
       <div className='container footer-inner'>
         <span>© {new Date().getFullYear()} Yannis Alouache</span>
         <span>
-          Conçu et développé avec <span className='footer-heart'>♥</span> en React
+          Made with <span className='footer-heart'>♥</span>
         </span>
         <div className='footer-links'>
           <a href='https://github.com/Yannis-Alouache' target='_blank' rel='noreferrer'>

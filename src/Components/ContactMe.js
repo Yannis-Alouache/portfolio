@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { EnvelopeSimple, LinkedinLogo, GithubLogo, FilePdf, ArrowRight } from '@phosphor-icons/react'
 import Reveal from './Reveal'
-import linkedinLogo from '../Assets/Images/linkedin-logo.png'
-import githubLogo from '../Assets/Images/github-logo.png'
 import resume from '../Assets/Pdf/CV.pdf'
 
 const FIELDS = [
@@ -83,9 +82,8 @@ function ContactMe() {
       <div className='container'>
         <div className='contact-grid'>
           <Reveal>
-            <span className='overline'>Contact</span>
             <h2 className='section-title'>
-              Travaillons <span className='grad-text'>ensemble.</span>
+              Travaillons ensemble.
             </h2>
             <p className='contact-text'>
               Un projet, une question, une opportunité ? N'hésitez pas à me contacter,
@@ -93,7 +91,7 @@ function ContactMe() {
             </p>
 
             <a className='contact-mail' href='mailto:yannisalouache@gmail.com'>
-              ✉ yannisalouache@gmail.com
+              <EnvelopeSimple size={17} weight='bold' /> yannisalouache@gmail.com
             </a>
 
             <div className='socials'>
@@ -104,7 +102,7 @@ function ContactMe() {
                 rel='noreferrer'
                 aria-label='LinkedIn'
               >
-                <img alt='LinkedIn' src={linkedinLogo} />
+                <LinkedinLogo size={19} weight='duotone' />
               </a>
               <a
                 className='social-btn'
@@ -113,7 +111,7 @@ function ContactMe() {
                 rel='noreferrer'
                 aria-label='GitHub'
               >
-                <img alt='GitHub' src={githubLogo} />
+                <GithubLogo size={19} weight='duotone' />
               </a>
               <a
                 className='social-btn'
@@ -122,12 +120,12 @@ function ContactMe() {
                 rel='noreferrer'
                 aria-label='Télécharger mon CV'
               >
-                <span style={{ fontSize: '17px' }}>📄</span>
+                <FilePdf size={19} weight='duotone' />
               </a>
             </div>
           </Reveal>
 
-          <Reveal delay={130}>
+          <Reveal delay={110}>
             <form ref={form} className='contact-form' onSubmit={sendEmail} noValidate>
               {FIELDS.map(field => (
                 <div key={field.name} className={`field ${errorField === field.name ? 'error' : ''}`}>
@@ -151,7 +149,7 @@ function ContactMe() {
                 <button type='submit' className='btn btn-primary' disabled={sending}>
                   {sending ? <span className='spinner' /> : (
                     <>
-                      Envoyer le message <span className='arrow'>→</span>
+                      Envoyer le message <span className='arrow'><ArrowRight size={16} weight='bold' /></span>
                     </>
                   )}
                 </button>

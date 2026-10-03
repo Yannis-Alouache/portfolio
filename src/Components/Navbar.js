@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Drawer } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll'
+import { X } from '@phosphor-icons/react'
 import mainLogo from '../Assets/Images/logo.png'
 
 function Navbar() {
@@ -11,19 +11,28 @@ function Navbar() {
 
   const navItems = [
     { label: 'Compétences', to: 'skills' },
+    { label: 'IA', to: 'ia' },
     { label: 'Projets', to: 'projects' },
-    { label: 'Contact', to: 'contact' },
   ]
 
+  const mobileNavItems = [...navItems, { label: 'Contact', to: 'contact' }]
+
   const scrollProps = { spy: true, smooth: true, offset: -80, duration: 600 }
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
 
   return (
     <>
       <header className='nav-shell'>
-        <nav className='nav'>
+        <nav className='container nav'>
           <a href='/' className='nav-brand'>
             <img className='nav-logo' alt='Logo Yannis Alouache' src={mainLogo} />
-            Yannis<span className='grad-text'>.dev</span>
+            Yannis Alouache
           </a>
 
           <div className='nav-links'>
@@ -49,32 +58,42 @@ function Navbar() {
         </nav>
       </header>
 
-      <Drawer
-        anchor='right'
-        open={open}
-        onClose={() => setOpen(false)}
-        PaperProps={{ sx: { background: '#0d0d17', width: '280px' } }}
-      >
-        <div className='mobile-links'>
-          <a href='/' className='mobile-link' onClick={() => setOpen(false)}>Accueil</a>
-          {isHome && navItems.map(item => (
-            <ScrollLink
-              key={item.to}
-              className='mobile-link'
-              to={item.to}
-              smooth
-              offset={-80}
-              duration={600}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </ScrollLink>
-          ))}
-          <a className='mobile-link' href='https://github.com/Yannis-Alouache' target='_blank' rel='noreferrer'>
-            GitHub
-          </a>
-        </div>
-      </Drawer>
+      {open && (
+        <>
+          <div className='drawer-backdrop' onClick={() => setOpen(false)} />
+          <div className='mobile-drawer' role='dialog' aria-label='Menu de navigation'>
+            <div className='mobile-head'>
+              <span className='nav-brand'>
+                <img className='nav-logo' alt='' src={mainLogo} />
+                Menu
+              </span>
+              <button className='mobile-close' onClick={() => setOpen(false)} aria-label='Fermer le menu'>
+                <X size={20} weight='bold' />
+              </button>
+            </div>
+            {isHome && mobileNavItems.map(item => (
+              <ScrollLink
+                key={item.to}
+                className='mobile-link'
+                to={item.to}
+                smooth
+                offset={-80}
+                duration={600}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </ScrollLink>
+            ))}
+            {!isHome && <a className='mobile-link' href='/'>Accueil</a>}
+            <a className='mobile-link' href='https://github.com/Yannis-Alouache' target='_blank' rel='noreferrer'>
+              GitHub
+            </a>
+            <a className='mobile-link' href='https://www.linkedin.com/in/yannis-alouache/' target='_blank' rel='noreferrer'>
+              LinkedIn
+            </a>
+          </div>
+        </>
+      )}
     </>
   )
 }
