@@ -2,16 +2,18 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { EnvelopeSimple, LinkedinLogo, GithubLogo, FilePdf, ArrowRight } from '@phosphor-icons/react'
 import Reveal from './Reveal'
+import { useLanguage } from '../i18n/LanguageContext.js'
 import resume from '../Assets/Pdf/CV.pdf'
 
 const FIELDS = [
-  { name: 'lastName', label: 'Nom' },
-  { name: 'firstName', label: 'Prénom' },
-  { name: 'mail', label: 'E-mail', type: 'email' },
-  { name: 'phone', label: 'Téléphone', type: 'tel' },
+  { name: 'lastName' },
+  { name: 'firstName' },
+  { name: 'mail', type: 'email' },
+  { name: 'phone', type: 'tel' },
 ]
 
 function ContactMe() {
+  const { t } = useLanguage()
   const form = useRef(null)
   const [sending, setSending] = useState(false)
   const [status, setStatus] = useState(null)
@@ -27,27 +29,27 @@ function ContactMe() {
 
     if (!values.lastName) {
       setErrorField('lastName')
-      setStatus({ type: 'error', text: 'Entrez un nom' })
+      setStatus({ type: 'error', text: t.contact.errors.lastName })
       return
     }
     if (!values.firstName) {
       setErrorField('firstName')
-      setStatus({ type: 'error', text: 'Entrez un prénom' })
+      setStatus({ type: 'error', text: t.contact.errors.firstName })
       return
     }
     if (!mailRegex.test(values.mail)) {
       setErrorField('mail')
-      setStatus({ type: 'error', text: 'Entrez un e-mail valide' })
+      setStatus({ type: 'error', text: t.contact.errors.mail })
       return
     }
     if (!phoneRegex.test(values.phone)) {
       setErrorField('phone')
-      setStatus({ type: 'error', text: 'Entrez un numéro de téléphone valide' })
+      setStatus({ type: 'error', text: t.contact.errors.phone })
       return
     }
     if (!values.message) {
       setErrorField('message')
-      setStatus({ type: 'error', text: 'Entrez un message' })
+      setStatus({ type: 'error', text: t.contact.errors.message })
       return
     }
 
@@ -64,16 +66,13 @@ function ContactMe() {
       )
       .then(() => {
         setSending(false)
-        setStatus({ type: 'success', text: 'Message envoyé ! Je vous réponds au plus vite.' })
+        setStatus({ type: 'success', text: t.contact.success })
         form.current.reset()
       })
       .catch((error) => {
         console.error(error)
         setSending(false)
-        setStatus({
-          type: 'error',
-          text: "Une erreur est survenue, réessayez ou écrivez-moi directement par e-mail.",
-        })
+        setStatus({ type: 'error', text: t.contact.errors.send })
       })
   }
 
@@ -83,12 +82,9 @@ function ContactMe() {
         <div className='contact-grid'>
           <Reveal>
             <h2 className='section-title'>
-              Travaillons ensemble.
+              {t.contact.title}
             </h2>
-            <p className='contact-text'>
-              Un projet, une question, une opportunité ? N'hésitez pas à me contacter,
-              je serai ravi d'échanger avec vous autour de vos idées.
-            </p>
+            <p className='contact-text'>{t.contact.text}</p>
 
             <a className='contact-mail' href='mailto:yannisalouache@gmail.com'>
               <EnvelopeSimple size={17} weight='bold' /> yannisalouache@gmail.com
@@ -118,7 +114,7 @@ function ContactMe() {
                 href={resume}
                 target='_blank'
                 rel='noreferrer'
-                aria-label='Télécharger mon CV'
+                aria-label={t.contact.cvAria}
               >
                 <FilePdf size={19} weight='duotone' />
               </a>
@@ -129,7 +125,7 @@ function ContactMe() {
             <form ref={form} className='contact-form' onSubmit={sendEmail} noValidate>
               {FIELDS.map(field => (
                 <div key={field.name} className={`field ${errorField === field.name ? 'error' : ''}`}>
-                  <label htmlFor={`contact-${field.name}`}>{field.label}</label>
+                  <label htmlFor={`contact-${field.name}`}>{t.contact.fields[field.name]}</label>
                   <input id={`contact-${field.name}`} name={field.name} type={field.type || 'text'} />
                   {errorField === field.name && status && (
                     <span className='field-error'>{status.text}</span>
@@ -138,7 +134,7 @@ function ContactMe() {
               ))}
 
               <div className={`field full ${errorField === 'message' ? 'error' : ''}`}>
-                <label htmlFor='contact-message'>Message</label>
+                <label htmlFor='contact-message'>{t.contact.fields.message}</label>
                 <textarea id='contact-message' name='message' rows={5} />
                 {errorField === 'message' && status && (
                   <span className='field-error'>{status.text}</span>
@@ -149,7 +145,7 @@ function ContactMe() {
                 <button type='submit' className='btn btn-primary' disabled={sending}>
                   {sending ? <span className='spinner' /> : (
                     <>
-                      Envoyer le message <span className='arrow'><ArrowRight size={16} weight='bold' /></span>
+                      {t.contact.submit} <span className='arrow'><ArrowRight size={16} weight='bold' /></span>
                     </>
                   )}
                 </button>

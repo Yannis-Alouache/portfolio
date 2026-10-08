@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import ImageViewer from 'react-simple-image-viewer'
+import { useLanguage } from '../i18n/LanguageContext.js'
 
 function Gallery({ gallery }) {
+  const { t } = useLanguage()
   const [viewer, setViewer] = useState({ open: false, index: 0 })
   const images = gallery.map(item => require('../Assets/Images/' + item))
 
   return (
     <div className='container detail-section'>
-      <h2 className='section-title'>Galerie</h2>
+      <h2 className='section-title'>{t.detail.gallery}</h2>
       <div className='gallery-grid'>
         {gallery.map((item, index) => (
           <img
             key={item}
             src={images[index]}
-            alt={`Aperçu ${index + 1}`}
+            alt={`${t.detail.preview} ${index + 1}`}
             loading='lazy'
             onClick={() => setViewer({ open: true, index })}
           />

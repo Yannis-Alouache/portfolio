@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import './Assets/Style/style.css'
+import { LanguageProvider } from './i18n/LanguageContext.js'
 import Home from './Pages/Home.js'
 import ProjectDetail from './Pages/ProjectDetail.js'
 import Footer from './Components/Footer.js'
@@ -27,21 +28,23 @@ function App() {
   let projectObarbeuc = projects[2]
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project/e-taxi" element={<ProjectDetail {...projectETaxi} />} />
-        <Route path="/project/angry-llama" element={<ProjectDetail {...projectDetailAngryLlama} />} />
-        <Route path="/project/my-castlevania" element={<ProjectDetail {...projectMyCastleVania} />} />
-        <Route path="/project/obarbeuc" element={<ProjectDetail {...projectObarbeuc} />} />
-        <Route path="/project/poke-maniaque" element={<ProjectDetail {...projectPokeManiaque} />} />
-        <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
-        <Route path="/project/falcon-marketing" element={<ProjectDetail {...projectFalconMarketing} />} />
-        <Route path="/project/mycarz" element={<ProjectDetail {...projectMyCarz} />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/e-taxi" element={<ProjectDetail {...projectETaxi} />} />
+          <Route path="/project/angry-llama" element={<ProjectDetail {...projectDetailAngryLlama} />} />
+          <Route path="/project/my-castlevania" element={<ProjectDetail {...projectMyCastleVania} />} />
+          <Route path="/project/obarbeuc" element={<ProjectDetail {...projectObarbeuc} />} />
+          <Route path="/project/poke-maniaque" element={<ProjectDetail {...projectPokeManiaque} />} />
+          <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
+          <Route path="/project/falcon-marketing" element={<ProjectDetail {...projectFalconMarketing} />} />
+          <Route path="/project/mycarz" element={<ProjectDetail {...projectMyCarz} />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </LanguageProvider>
   )
 }
 

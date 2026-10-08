@@ -3,13 +3,14 @@ import { Stack, Layout, Wrench, Brain, PlugsConnected, PuzzlePiece, Compass, Cli
 import SectionHeader from './SectionHeader'
 import Reveal from './Reveal'
 import Skill from './Skill'
+import { useLanguage } from '../i18n/LanguageContext.js'
 
 const devicon = (name, variant = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${variant}.svg`
 
 const GROUPS = [
   {
-    title: 'Back-end',
+    key: 'backend',
     icon: Stack,
     skills: [
       { name: 'NestJS', icon: devicon('nestjs') },
@@ -25,7 +26,7 @@ const GROUPS = [
     ],
   },
   {
-    title: 'Front-end',
+    key: 'frontend',
     icon: Layout,
     skills: [
       { name: 'React', icon: devicon('react') },
@@ -41,7 +42,7 @@ const GROUPS = [
     ],
   },
   {
-    title: 'Outils & environnements',
+    key: 'tools',
     icon: Wrench,
     skills: [
       { name: 'Git', icon: devicon('git') },
@@ -57,7 +58,7 @@ const GROUPS = [
     ],
   },
   {
-    title: 'IA & développement assisté',
+    key: 'ai',
     icon: Brain,
     ai: true,
     skills: [
@@ -73,20 +74,22 @@ const GROUPS = [
 ]
 
 function Skills() {
+  const { t } = useLanguage()
+
   return (
     <section className='section' id='skills'>
       <div className='container'>
         <SectionHeader
-          title='Ma boîte à outils'
-          sub="Les technologies que j'utilise au quotidien pour concevoir, développer et déployer des applications web complètes."
+          title={t.skills.title}
+          sub={t.skills.sub}
         />
         <div className='skills-grid'>
           {GROUPS.map((group, index) => (
-            <Reveal key={group.title} delay={index * 90}>
+            <Reveal key={group.key} delay={index * 90}>
               <div className={`skill-group ${group.ai ? 'ai-group' : ''}`}>
                 <h3 className='skill-group-title'>
                   <span className='icon'><group.icon size={19} weight='duotone' /></span>
-                  {group.title}
+                  {t.skills.groups[group.key]}
                 </h3>
                 <div className='skill-chips'>
                   {group.skills.map(skill => (

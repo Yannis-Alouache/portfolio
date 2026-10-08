@@ -8,10 +8,12 @@ import {
   LinkedinLogo,
   FilePdf,
 } from '@phosphor-icons/react'
+import { useLanguage } from '../i18n/LanguageContext.js'
 import avatar from '../Assets/Images/avatar.png'
 import resume from '../Assets/Pdf/CV.pdf'
 
 function Herobanner() {
+  const { t } = useLanguage()
   const yearsOfXp = Math.max(1, new Date().getFullYear() - 2023)
 
   return (
@@ -20,32 +22,28 @@ function Herobanner() {
         <div>
           <div className='hero-badge'>
             <span className='dot' />
-            Disponible pour de nouvelles opportunités
+            {t.hero.badge}
           </div>
 
           <h1 className='hero-title'>Yannis Alouache</h1>
 
-          <p className='hero-sub'>
-            Développeur full-stack basé à Lille, appétence back-end. Passionné par
-            l'intelligence artificielle, je conçois des applications web robustes :
-            architecture soignée, tests, code maintenable.
-          </p>
+          <p className='hero-sub'>{t.hero.sub}</p>
 
           <div className='hero-actions'>
             <ScrollLink to='projects' smooth offset={-80} duration={600} className='btn btn-primary'>
-              Voir mes projets <span className='arrow'><ArrowRight size={16} weight='bold' /></span>
+              {t.hero.ctaProjects} <span className='arrow'><ArrowRight size={16} weight='bold' /></span>
             </ScrollLink>
             <a href={resume} target='_blank' rel='noreferrer' className='btn btn-ghost'>
-              <DownloadSimple size={16} weight='bold' /> Télécharger le CV
+              <DownloadSimple size={16} weight='bold' /> {t.hero.ctaResume}
             </a>
           </div>
         </div>
 
         <div className='profile-card'>
           <div className='profile-top'>
-            <img className='profile-avatar' alt='Avatar de Yannis Alouache' src={avatar} />
+            <img className='profile-avatar' alt={t.hero.avatarAlt} src={avatar} />
             <div>
-              <div className='profile-name'>Développeur full-stack</div>
+              <div className='profile-name'>{t.hero.role}</div>
               <div className='profile-role'>Spring Boot, Angular, NestJS</div>
               <div className='profile-meta'>
                 <MapPin size={12} weight='bold' /> Lille, France
@@ -56,15 +54,15 @@ function Herobanner() {
           <div className='profile-stats'>
             <div className='profile-stat'>
               <div className='stat-value'>8</div>
-              <div className='stat-label'>Projets livrés</div>
+              <div className='stat-label'>{t.hero.statProjects}</div>
             </div>
             <div className='profile-stat'>
               <div className='stat-value'>3</div>
-              <div className='stat-label'>Missions freelance</div>
+              <div className='stat-label'>{t.hero.statFreelance}</div>
             </div>
             <div className='profile-stat'>
               <div className='stat-value'>{yearsOfXp}+</div>
-              <div className='stat-label'>Années d'expérience</div>
+              <div className='stat-label'>{t.hero.statYears}</div>
             </div>
           </div>
 

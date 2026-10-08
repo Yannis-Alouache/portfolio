@@ -1,7 +1,18 @@
 import React from 'react'
 import { ArrowRight } from '@phosphor-icons/react'
+import { useLanguage } from '../i18n/LanguageContext.js'
+
+const BADGE_KEYS = {
+  Freelance: 'freelance',
+  'Projet perso': 'personal',
+  'Projet étudiant': 'student',
+}
 
 function Project({ name, description, tags, badge, image, link }) {
+  const { t } = useLanguage()
+  const badgeKey = BADGE_KEYS[badge]
+  const badgeLabel = badgeKey ? t.projects.badges[badgeKey] : badge
+
   return (
     <a className='project-card' href={link}>
       <div className='project-media'>
@@ -10,20 +21,20 @@ function Project({ name, description, tags, badge, image, link }) {
       <div className='project-body'>
         <div className='project-head'>
           <h3 className='project-name'>{name}</h3>
-          {badge && (
-            <span className={`project-badge ${badge === 'Freelance' ? 'freelance' : ''}`}>
-              {badge}
+          {badgeLabel && (
+            <span className={`project-badge ${badgeKey === 'freelance' ? 'freelance' : ''}`}>
+              {badgeLabel}
             </span>
           )}
         </div>
-        <p className='project-desc'>{description}</p>
+        <p className='project-desc'>{t.projects.descriptions[name] ?? description}</p>
         <div className='project-tags'>
           {tags.map(tag => (
-            <span className='tag' key={tag}>{tag}</span>
+            <span className='tag' key={tag}>{t.projects.tags[tag] ?? tag}</span>
           ))}
         </div>
         <span className='project-cta'>
-          Voir le projet <ArrowRight size={14} weight='bold' />
+          {t.projects.cta} <ArrowRight size={14} weight='bold' />
         </span>
       </div>
     </a>
