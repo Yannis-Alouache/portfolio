@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Layout, Wrench, Brain, PlugsConnected, PuzzlePiece, Compass, ClipboardText, ChatCircleText, TestTube } from '@phosphor-icons/react'
+import { Stack, Layout, Wrench, Brain, PlugsConnected, PuzzlePiece, Compass, ClipboardText, ChatCircleText, TestTube, Fire } from '@phosphor-icons/react'
 import SectionHeader from './SectionHeader'
 import Reveal from './Reveal'
 import Skill from './Skill'
@@ -69,6 +69,7 @@ const GROUPS = [
       { name: 'BMAD-METHOD', Icon: Compass },
       { name: 'Spec-Driven Development', Icon: ClipboardText },
       { name: 'Prompt engineering', Icon: ChatCircleText },
+      { name: 'Grill-me', Icon: Fire },
     ],
   },
 ]
