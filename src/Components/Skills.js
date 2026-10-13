@@ -21,6 +21,8 @@ const GROUPS = [
       { name: 'Python', icon: devicon('python') },
       { name: 'Django', icon: devicon('django') },
       { name: 'Express', icon: devicon('express') },
+      { name: 'Laravel', icon: devicon('laravel') },
+      { name: 'PHP', icon: devicon('php') },
       { name: 'MySQL', icon: devicon('mysql') },
       { name: 'MongoDB', icon: devicon('mongodb') },
     ],
