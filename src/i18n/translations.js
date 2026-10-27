@@ -72,6 +72,7 @@ export const translations = {
         student: 'Projet étudiant',
       },
       descriptions: {
+        Delizo: 'SaaS de commande et paiement à table par QR code pour les restaurants.',
         'Falcon Marketing': 'Site vitrine pour une agence de recrutement de commerciaux.',
         MyCarz: 'Site vitrine pour un garage automobile de Roubaix.',
         'E-Taxi': 'Plateforme de réservation de taxis dans le Nord.',
@@ -118,6 +119,8 @@ export const translations = {
       preview: 'Aperçu',
     },
     details: {
+      Delizo:
+        "Delizo est un SaaS de commande à table pour les restaurants. Le client scanne le QR code de sa table, consulte le menu, commande et paie depuis son téléphone ; la commande arrive en cuisine en temps réel. Le restaurateur gère son menu, ses photos et ses statistiques depuis un back-office, et encaisse directement sur son compte Stripe, sans commission.",
       AngryLLama: "AngryLLama est un site vitrine présentant une collection de NFT que j'ai créée.",
       GothicVania: "GothicVania est un jeu vidéo de type runner inspiré de l'univers Castlevania.",
       OBarbeuc: 'OBarbeuc est un site présentant un restaurant fictif.',
@@ -201,6 +204,7 @@ export const translations = {
         student: 'Student project',
       },
       descriptions: {
+        Delizo: 'QR-code table ordering and payment SaaS for restaurants.',
         'Falcon Marketing': 'Showcase website for a sales-recruitment agency.',
         MyCarz: 'Showcase website for a car garage in Roubaix.',
         'E-Taxi': 'Taxi booking platform in the Lille region.',
@@ -247,6 +251,8 @@ export const translations = {
       preview: 'Preview',
     },
     details: {
+      Delizo:
+        'Delizo is a table-ordering SaaS for restaurants. Guests scan the QR code on their table, browse the menu, order and pay from their phone; the order reaches the kitchen in real time. The restaurant owner manages the menu, photos and statistics from a back-office, and gets paid directly to their own Stripe account, with zero commission.',
       AngryLLama: 'AngryLLama is a showcase website presenting an NFT collection I created.',
       GothicVania: 'GothicVania is a runner-style video game inspired by the Castlevania universe.',
       OBarbeuc: 'OBarbeuc is a website presenting a fictional restaurant.',

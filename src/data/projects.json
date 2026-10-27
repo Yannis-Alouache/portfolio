@@ -1,5 +1,13 @@
 [
     {
+        "name": "Delizo",
+        "description": "SaaS de commande et paiement à table par QR code pour les restaurants.",
+        "tags": ["SaaS", "Spring Boot", "Angular"],
+        "badge": "Projet perso",
+        "image": "delizo-1.png",
+        "link": "/project/delizo"
+    },
+    {
         "name": "Falcon Marketing",
         "description": "Site vitrine pour une agence de recrutement de commerciaux.",
         "tags": ["Marketing", "Next.js"],

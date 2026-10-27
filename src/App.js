@@ -26,6 +26,7 @@ function App() {
   let projectMyCarz = projects[7]
   let projectMyCastleVania = projects[1]
   let projectObarbeuc = projects[2]
+  let projectDelizo = projects[8]
 
   return (
     <LanguageProvider>
@@ -41,6 +42,7 @@ function App() {
           <Route path="/project/drivetty" element={<ProjectDetail {...projectDrivetty} />} />
           <Route path="/project/falcon-marketing" element={<ProjectDetail {...projectFalconMarketing} />} />
           <Route path="/project/mycarz" element={<ProjectDetail {...projectMyCarz} />} />
+          <Route path="/project/delizo" element={<ProjectDetail {...projectDelizo} />} />
         </Routes>
         <Footer />
       </Router>

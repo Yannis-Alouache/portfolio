@@ -209,5 +209,32 @@
             "mycarz-11.png",
             "mycarz-12.png"
         ]
+    },
+    {
+        "name": "Delizo",
+        "description": "Delizo est un SaaS de commande à table pour les restaurants.",
+        "link": null,
+        "github": null,
+        "technologies": [
+            {"name": "Java", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "id": "0"},
+            {"name": "Spring Boot", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", "id": "1"},
+            {"name": "PostgreSQL", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", "id": "2"},
+            {"name": "Flyway", "image": "https://cdn.simpleicons.org/flyway", "id": "3"},
+            {"name": "Stripe", "image": "https://cdn.simpleicons.org/stripe", "id": "4"},
+            {"name": "TypeScript", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "id": "5"},
+            {"name": "Angular", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg", "id": "6"},
+            {"name": "Tailwind", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", "id": "7"},
+            {"name": "Astro", "image": "https://cdn.simpleicons.org/astro", "id": "8"},
+            {"name": "Docker", "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", "id": "9"},
+            {"name": "Playwright", "image": "https://cdn.jsdelivr.net/gh/microsoft/playwright.dev@main/static/img/playwright-logo.svg", "id": "10"},
+            {"name": "Sentry", "image": "https://cdn.simpleicons.org/sentry", "id": "11"}
+        ],
+        "gallery": [
+            "delizo-1.png",
+            "delizo-2.png",
+            "delizo-3.png",
+            "delizo-4.png",
+            "delizo-5.png"
+        ]
     }
 ]
